@@ -1,0 +1,172 @@
+aid: formstack
+url: https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/apis.yml
+name: Formstack
+kind: company
+description: >-
+  Formstack is a no-code workplace productivity platform spanning online forms,
+  document generation, electronic signature, and workflow automation. The
+  developer portal at developers.formstack.com exposes a REST API (v2025.0) for
+  forms, submissions, fields, webhooks, folders, and partial submissions, plus
+  product-specific surfaces for Formstack Documents, Formstack Sign, and
+  Formstack Workflows. Authentication uses OAuth 2.0. Machine-readable indexes
+  and OpenAPI artifacts are surfaced at developers.formstack.com/llms.txt.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Forms
+  - Documents
+  - eSignature
+  - Workflow Automation
+  - No-Code
+  - OAuth2
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis:
+  - aid: formstack:forms
+    name: Formstack Forms API
+    description: >-
+      REST API for creating, reading, updating, and deleting forms in a
+      Formstack account, including form configuration, styling, and access
+      rules.
+    humanURL: https://developers.formstack.com/reference/api-overview
+    baseURL: https://www.formstack.com/api/v2
+    tags:
+      - Forms
+      - REST
+    properties:
+      - type: Documentation
+        url: https://developers.formstack.com/reference/api-overview
+  - aid: formstack:submissions
+    name: Formstack Submissions API
+    description: >-
+      Read, create, update, and delete form submissions; supports filtering by
+      date, search, and field values. Returns submitted field data and
+      metadata.
+    humanURL: https://developers.formstack.com/reference/api-overview
+    baseURL: https://www.formstack.com/api/v2
+    tags:
+      - Submissions
+      - Data
+    properties:
+      - type: Documentation
+        url: https://developers.formstack.com/reference/api-overview
+  - aid: formstack:fields
+    name: Formstack Fields API
+    description: >-
+      Programmatically manage form fields - text, select, file upload, signature,
+      payment, calculation, and others - including ordering, validation, and
+      conditional logic.
+    humanURL: https://developers.formstack.com/reference/api-overview
+    baseURL: https://www.formstack.com/api/v2
+    tags:
+      - Fields
+      - Form Schema
+    properties:
+      - type: Documentation
+        url: https://developers.formstack.com/reference/api-overview
+  - aid: formstack:webhooks
+    name: Formstack Webhooks API
+    description: >-
+      Configure webhook subscriptions to receive submission events at a
+      customer-provided URL, with retry semantics for failed deliveries.
+    humanURL: https://developers.formstack.com/reference/api-overview
+    baseURL: https://www.formstack.com/api/v2
+    tags:
+      - Webhooks
+      - Events
+    properties:
+      - type: Documentation
+        url: https://developers.formstack.com/reference/api-overview
+  - aid: formstack:folders
+    name: Formstack Folders API
+    description: >-
+      Manage folder organization for forms within a Formstack account.
+    humanURL: https://developers.formstack.com/reference/api-overview
+    baseURL: https://www.formstack.com/api/v2
+    tags:
+      - Folders
+      - Organization
+    properties:
+      - type: Documentation
+        url: https://developers.formstack.com/reference/api-overview
+  - aid: formstack:documents
+    name: Formstack Documents API
+    description: >-
+      Programmatic interface to Formstack Documents (formerly WebMerge) for
+      generating PDFs, Word docs, and other templated documents from data
+      payloads.
+    humanURL: https://developers.formstack.com/
+    baseURL: https://www.webmerge.me/api
+    tags:
+      - Documents
+      - Document Generation
+      - PDF
+    properties:
+      - type: Documentation
+        url: https://developers.formstack.com/
+  - aid: formstack:sign
+    name: Formstack Sign API
+    description: >-
+      Electronic signature API for sending documents for signature, tracking
+      status, and retrieving signed copies. Part of the Formstack Suite.
+    humanURL: https://developers.formstack.com/
+    baseURL: https://www.formstack.com/api/v2
+    tags:
+      - eSignature
+      - Sign
+    properties:
+      - type: Documentation
+        url: https://developers.formstack.com/
+  - aid: formstack:workflows
+    name: Formstack Workflows API
+    description: >-
+      Workflow automation surface for routing submissions, documents, and
+      approvals across multi-step business processes.
+    humanURL: https://developers.formstack.com/
+    baseURL: https://www.formstack.com/api/v2
+    tags:
+      - Workflows
+      - Automation
+    properties:
+      - type: Documentation
+        url: https://developers.formstack.com/
+  - aid: formstack:oauth2
+    name: Formstack OAuth 2.0
+    description: >-
+      OAuth 2.0 authorization server used to authenticate API clients and
+      issue access tokens for the Formstack REST API.
+    humanURL: https://developers.formstack.com/reference/oauth2-authentication
+    baseURL: https://www.formstack.com/api/v2/oauth2
+    tags:
+      - OAuth2
+      - Authentication
+    properties:
+      - type: Documentation
+        url: https://developers.formstack.com/reference/oauth2-authentication
+common:
+  - type: Website
+    url: https://www.formstack.com/
+  - type: Documentation
+    url: https://developers.formstack.com/
+  - type: Changelog
+    url: https://developers.formstack.com/changelog
+  - type: LLMsTxt
+    url: https://developers.formstack.com/llms.txt
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/formstack
+  - type: GitHub
+    url: https://github.com/formstack
+  - type: Twitter
+    url: https://twitter.com/Formstack
+integrations:
+  - name: Salesforce
+  - name: HubSpot
+  - name: Microsoft Dynamics 365
+  - name: Google Workspace
+  - name: Slack
+  - name: Stripe
+  - name: PayPal
+  - name: Zapier
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
