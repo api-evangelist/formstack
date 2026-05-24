@@ -1,0 +1,377 @@
+openapi: 3.1.0
+info:
+  title: Formstack API
+  description: |
+    REST API for Formstack — manage forms, fields, submissions, confirmations,
+    notifications, webhooks, themes, folders, portals, smart lists, subaccounts,
+    submit actions, and partial submissions. Authentication uses OAuth 2.0.
+
+    Detailed endpoint definitions are derived from the public developer portal
+    at https://developers.formstack.com/ (machine-readable index at
+    https://developers.formstack.com/llms.txt).
+  version: 2025.0
+  contact:
+    name: Formstack Developers
+    url: https://developers.formstack.com/
+servers:
+  - url: https://www.formstack.com/api/v2
+    description: Production v2
+security:
+  - oauth2: []
+paths:
+  /forms.json:
+    get:
+      summary: List forms
+      operationId: listForms
+      tags: [Forms]
+      parameters:
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/per_page'
+        - name: folder
+          in: query
+          schema: { type: string }
+      responses:
+        "200":
+          description: Paginated list of forms.
+    post:
+      summary: Create a form
+      operationId: createForm
+      tags: [Forms]
+      responses:
+        "200": { description: Form created. }
+  /form/{formId}.json:
+    parameters:
+      - $ref: '#/components/parameters/formId'
+    get:
+      summary: Get form
+      operationId: getForm
+      tags: [Forms]
+      responses:
+        "200": { description: Form. }
+    put:
+      summary: Update form
+      operationId: updateForm
+      tags: [Forms]
+      responses:
+        "200": { description: Form updated. }
+    delete:
+      summary: Delete form
+      operationId: deleteForm
+      tags: [Forms]
+      responses:
+        "200": { description: Form deleted. }
+  /form/{formId}/html.json:
+    parameters:
+      - $ref: '#/components/parameters/formId'
+    get:
+      summary: Get form HTML
+      operationId: getFormHtml
+      tags: [Forms]
+      responses:
+        "200": { description: Form HTML. }
+  /form/{formId}/copy.json:
+    parameters:
+      - $ref: '#/components/parameters/formId'
+    post:
+      summary: Copy form
+      operationId: copyForm
+      tags: [Forms]
+      responses:
+        "200": { description: Copied form. }
+  /form/{formId}/prefill.json:
+    parameters:
+      - $ref: '#/components/parameters/formId'
+    post:
+      summary: Generate prefilled URL
+      operationId: prefillForm
+      tags: [Forms]
+      responses:
+        "200": { description: Prefilled URL generated. }
+  /form/{formId}/field.json:
+    parameters:
+      - $ref: '#/components/parameters/formId'
+    get:
+      summary: List fields
+      operationId: listFields
+      tags: [Fields]
+      responses:
+        "200": { description: Fields list. }
+    post:
+      summary: Create field
+      operationId: createField
+      tags: [Fields]
+      responses:
+        "200": { description: Field created. }
+  /field/{fieldId}.json:
+    parameters:
+      - $ref: '#/components/parameters/fieldId'
+    get:
+      summary: Get field
+      operationId: getField
+      tags: [Fields]
+      responses:
+        "200": { description: Field. }
+    put:
+      summary: Update field
+      operationId: updateField
+      tags: [Fields]
+      responses:
+        "200": { description: Field updated. }
+    delete:
+      summary: Delete field
+      operationId: deleteField
+      tags: [Fields]
+      responses:
+        "200": { description: Field deleted. }
+  /form/{formId}/submission.json:
+    parameters:
+      - $ref: '#/components/parameters/formId'
+    get:
+      summary: List submissions for a form
+      operationId: listFormSubmissions
+      tags: [Submissions]
+      parameters:
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/per_page'
+        - name: min_time
+          in: query
+          schema: { type: string, format: date-time }
+        - name: max_time
+          in: query
+          schema: { type: string, format: date-time }
+      responses:
+        "200": { description: Submissions. }
+    post:
+      summary: Create submission
+      operationId: createSubmission
+      tags: [Submissions]
+      responses:
+        "200": { description: Submission created. }
+  /submission/{submissionId}.json:
+    parameters:
+      - $ref: '#/components/parameters/submissionId'
+    get:
+      summary: Get submission
+      operationId: getSubmission
+      tags: [Submissions]
+      responses:
+        "200": { description: Submission. }
+    put:
+      summary: Update submission
+      operationId: updateSubmission
+      tags: [Submissions]
+      responses:
+        "200": { description: Submission updated. }
+    delete:
+      summary: Delete submission
+      operationId: deleteSubmission
+      tags: [Submissions]
+      responses:
+        "200": { description: Submission deleted. }
+  /form/{formId}/confirmation.json:
+    parameters:
+      - $ref: '#/components/parameters/formId'
+    get:
+      summary: List confirmations
+      operationId: listConfirmations
+      tags: [Confirmations]
+      responses:
+        "200": { description: Confirmations. }
+    post:
+      summary: Create confirmation
+      operationId: createConfirmation
+      tags: [Confirmations]
+      responses:
+        "200": { description: Created. }
+  /confirmation/{confirmationId}.json:
+    parameters:
+      - $ref: '#/components/parameters/confirmationId'
+    get:
+      summary: Get confirmation
+      operationId: getConfirmation
+      tags: [Confirmations]
+      responses:
+        "200": { description: Confirmation. }
+    put:
+      summary: Update confirmation
+      operationId: updateConfirmation
+      tags: [Confirmations]
+      responses:
+        "200": { description: Updated. }
+    delete:
+      summary: Delete confirmation
+      operationId: deleteConfirmation
+      tags: [Confirmations]
+      responses:
+        "200": { description: Deleted. }
+  /form/{formId}/notification.json:
+    parameters:
+      - $ref: '#/components/parameters/formId'
+    get:
+      summary: List notifications
+      operationId: listNotifications
+      tags: [Notifications]
+      responses:
+        "200": { description: Notifications. }
+    post:
+      summary: Create notification
+      operationId: createNotification
+      tags: [Notifications]
+      responses:
+        "200": { description: Created. }
+  /notification/{notificationId}.json:
+    parameters:
+      - $ref: '#/components/parameters/notificationId'
+    get:
+      summary: Get notification
+      operationId: getNotification
+      tags: [Notifications]
+      responses:
+        "200": { description: Notification. }
+    put:
+      summary: Update notification
+      operationId: updateNotification
+      tags: [Notifications]
+      responses:
+        "200": { description: Updated. }
+    delete:
+      summary: Delete notification
+      operationId: deleteNotification
+      tags: [Notifications]
+      responses:
+        "200": { description: Deleted. }
+  /form/{formId}/webhook.json:
+    parameters:
+      - $ref: '#/components/parameters/formId'
+    get:
+      summary: List webhooks
+      operationId: listWebhooks
+      tags: [Webhooks]
+      responses:
+        "200": { description: Webhooks. }
+    post:
+      summary: Create webhook
+      operationId: createWebhook
+      tags: [Webhooks]
+      responses:
+        "200": { description: Created. }
+  /webhook/{webhookId}.json:
+    parameters:
+      - $ref: '#/components/parameters/webhookId'
+    get:
+      summary: Get webhook
+      operationId: getWebhook
+      tags: [Webhooks]
+      responses:
+        "200": { description: Webhook. }
+    put:
+      summary: Update webhook
+      operationId: updateWebhook
+      tags: [Webhooks]
+      responses:
+        "200": { description: Updated. }
+    delete:
+      summary: Delete webhook
+      operationId: deleteWebhook
+      tags: [Webhooks]
+      responses:
+        "200": { description: Deleted. }
+  /folder.json:
+    get:
+      summary: List folders
+      operationId: listFolders
+      tags: [Folders]
+      responses:
+        "200": { description: Folders. }
+    post:
+      summary: Create folder
+      operationId: createFolder
+      tags: [Folders]
+      responses:
+        "200": { description: Created. }
+  /folder/{folderId}.json:
+    parameters:
+      - $ref: '#/components/parameters/folderId'
+    get:
+      summary: Get folder
+      operationId: getFolder
+      tags: [Folders]
+      responses:
+        "200": { description: Folder. }
+    put:
+      summary: Update folder
+      operationId: updateFolder
+      tags: [Folders]
+      responses:
+        "200": { description: Updated. }
+    delete:
+      summary: Delete folder
+      operationId: deleteFolder
+      tags: [Folders]
+      responses:
+        "200": { description: Deleted. }
+  /subaccount.json:
+    get:
+      summary: List subaccounts
+      operationId: listSubaccounts
+      tags: [Subaccounts]
+      responses:
+        "200": { description: Subaccounts. }
+components:
+  parameters:
+    formId:
+      name: formId
+      in: path
+      required: true
+      schema: { type: string }
+    fieldId:
+      name: fieldId
+      in: path
+      required: true
+      schema: { type: string }
+    submissionId:
+      name: submissionId
+      in: path
+      required: true
+      schema: { type: string }
+    confirmationId:
+      name: confirmationId
+      in: path
+      required: true
+      schema: { type: string }
+    notificationId:
+      name: notificationId
+      in: path
+      required: true
+      schema: { type: string }
+    webhookId:
+      name: webhookId
+      in: path
+      required: true
+      schema: { type: string }
+    folderId:
+      name: folderId
+      in: path
+      required: true
+      schema: { type: string }
+    page:
+      name: page
+      in: query
+      schema: { type: integer, minimum: 1 }
+    per_page:
+      name: per_page
+      in: query
+      schema: { type: integer, minimum: 1, maximum: 100 }
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: OAuth 2.0 authorization code flow.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://www.formstack.com/api/v2/oauth2/authorize
+          tokenUrl: https://www.formstack.com/api/v2/oauth2/token
+          scopes:
+            forms_read: Read forms
+            forms_write: Manage forms
+            submissions_read: Read submissions
+            submissions_write: Manage submissions
