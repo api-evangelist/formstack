@@ -19,7 +19,7 @@ tags:
   - No-Code
   - OAuth2
 created: '2026-05-23'
-modified: '2026-05-23'
+modified: '2026-05-30'
 specificationVersion: '0.19'
 apis:
   - aid: formstack:forms
@@ -77,6 +77,8 @@ apis:
     properties:
       - type: Documentation
         url: https://developers.formstack.com/reference/api-overview
+      - type: AsyncAPI
+        url: https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/openapi/formstack-asyncapi.yml
   - aid: formstack:folders
     name: Formstack Folders API
     description: >-

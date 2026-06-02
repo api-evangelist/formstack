@@ -1,0 +1,147 @@
+asyncapi: '2.6.0'
+info:
+  title: Formstack Webhooks
+  version: '2025.0'
+  description: |
+    AsyncAPI description of Formstack's documented webhook surface for form
+    submission events. A webhook is configured per form (via the Formstack
+    Webhooks REST API or the form builder) and points at a customer-controlled
+    HTTP endpoint. When the associated form is submitted, Formstack delivers
+    the submission payload to that endpoint via HTTP POST.
+
+    This document only describes what is publicly documented at
+    developers.formstack.com and the Formstack help center webhook article.
+    Formstack does not publish distinct event types beyond the form submission
+    event modeled here.
+  contact:
+    name: Formstack Developers
+    url: https://developers.formstack.com/
+  license:
+    name: Proprietary
+    url: https://www.formstack.com/legal/terms
+  externalDocs:
+    description: Formstack webhooks reference
+    url: https://developers.formstack.com/reference/webhook
+
+defaultContentType: application/x-www-form-urlencoded
+
+servers:
+  subscriber:
+    url: '{webhookUrl}'
+    protocol: https
+    description: |
+      Customer-provided HTTPS endpoint registered against a form via
+      POST /form/{formId}/webhook.json. Formstack delivers submission
+      payloads to this URL.
+    variables:
+      webhookUrl:
+        description: Fully-qualified HTTPS URL registered as the webhook target.
+        default: https://example.com/formstack/webhook
+
+channels:
+  form/submission:
+    description: |
+      Channel representing a Formstack form submission delivery. Formstack
+      POSTs the submission payload to the configured webhook URL each time
+      the associated form receives a new submission.
+    publish:
+      operationId: receiveFormSubmission
+      summary: Receive a form submission event from Formstack.
+      description: |
+        Formstack performs an HTTP POST to the registered webhook URL with the
+        submission data. Payload may be sent as URL-encoded form data
+        (default) or as JSON depending on webhook configuration. Complex
+        fields (such as Name and Address) are delivered as separate
+        subfields by default and may optionally be flattened.
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        oneOf:
+          - $ref: '#/components/messages/FormSubmission'
+          - $ref: '#/components/messages/FormSubmissionJson'
+
+components:
+  messages:
+    FormSubmission:
+      name: FormSubmission
+      title: Form submission (URL-encoded)
+      summary: Submission delivered as application/x-www-form-urlencoded body.
+      contentType: application/x-www-form-urlencoded
+      headers:
+        $ref: '#/components/schemas/WebhookHeaders'
+      payload:
+        $ref: '#/components/schemas/FormSubmissionPayload'
+    FormSubmissionJson:
+      name: FormSubmissionJson
+      title: Form submission (JSON)
+      summary: Submission delivered as application/json body when the webhook
+        is configured to send JSON.
+      contentType: application/json
+      headers:
+        $ref: '#/components/schemas/WebhookHeaders'
+      payload:
+        $ref: '#/components/schemas/FormSubmissionPayload'
+
+  schemas:
+    WebhookHeaders:
+      type: object
+      description: |
+        HTTP request headers Formstack sets when delivering a webhook.
+      properties:
+        X-FS-Signature:
+          type: string
+          description: |
+            HMAC-SHA256 signature of the request body, computed using the
+            secret key configured for the webhook. Used by the receiver to
+            verify the request originated from Formstack and was not altered
+            in transit.
+        Content-Type:
+          type: string
+          description: |
+            application/x-www-form-urlencoded by default, or application/json
+            when the webhook is configured to send JSON.
+          enum:
+            - application/x-www-form-urlencoded
+            - application/json
+
+    FormSubmissionPayload:
+      type: object
+      description: |
+        Payload Formstack delivers when a form is submitted. The exact set of
+        keys depends on the form's fields and the webhook's configuration
+        (field names vs field IDs vs API-friendly field keys, complex field
+        separation, inclusion of field type metadata).
+      properties:
+        FormID:
+          type: string
+          description: Identifier of the Formstack form that produced the
+            submission (numeric string, e.g. "23534").
+          example: '23534'
+        UniqueID:
+          type: string
+          description: Unique identifier for the submission.
+        HandshakeKey:
+          type: string
+          description: |
+            Optional shared-secret value configured on the webhook and echoed
+            back in the payload so the receiver can verify the request.
+      required:
+        - FormID
+        - UniqueID
+      additionalProperties:
+        description: |
+          Submitted field values. Keys are either field names (default),
+          numeric field IDs, or API-friendly field keys depending on the
+          webhook's configuration. Complex fields (Name, Address, etc.) are
+          delivered as separate keys per subfield (for example
+          "Name (First)" and "Name (Last)") by default, and may optionally
+          be flattened to a single string per field. When a form contains
+          multiple fields of the same type, only the last occurrence is
+          included.
+        oneOf:
+          - type: string
+          - type: number
+          - type: boolean
