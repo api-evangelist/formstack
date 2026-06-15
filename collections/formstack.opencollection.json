@@ -1,0 +1,790 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Formstack API",
+    "version": "2025"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://www.formstack.com/api/v2/oauth2/authorize",
+      "accessTokenUrl": "https://www.formstack.com/api/v2/oauth2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Forms",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List forms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/forms.json",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "folder",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List forms"
+        },
+        {
+          "info": {
+            "name": "Create a form",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/forms.json"
+          },
+          "docs": "Create a form"
+        },
+        {
+          "info": {
+            "name": "Get form",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/form/:formId.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get form"
+        },
+        {
+          "info": {
+            "name": "Update form",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.formstack.com/api/v2/form/:formId.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update form"
+        },
+        {
+          "info": {
+            "name": "Delete form",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.formstack.com/api/v2/form/:formId.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete form"
+        },
+        {
+          "info": {
+            "name": "Get form HTML",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/form/:formId/html.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get form HTML"
+        },
+        {
+          "info": {
+            "name": "Copy form",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/form/:formId/copy.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Copy form"
+        },
+        {
+          "info": {
+            "name": "Generate prefilled URL",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/form/:formId/prefill.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Generate prefilled URL"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Fields",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/form/:formId/field.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List fields"
+        },
+        {
+          "info": {
+            "name": "Create field",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/form/:formId/field.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create field"
+        },
+        {
+          "info": {
+            "name": "Get field",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/field/:fieldId.json",
+            "params": [
+              {
+                "name": "fieldId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get field"
+        },
+        {
+          "info": {
+            "name": "Update field",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.formstack.com/api/v2/field/:fieldId.json",
+            "params": [
+              {
+                "name": "fieldId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update field"
+        },
+        {
+          "info": {
+            "name": "Delete field",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.formstack.com/api/v2/field/:fieldId.json",
+            "params": [
+              {
+                "name": "fieldId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete field"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Submissions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List submissions for a form",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/form/:formId/submission.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "min_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max_time",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List submissions for a form"
+        },
+        {
+          "info": {
+            "name": "Create submission",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/form/:formId/submission.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create submission"
+        },
+        {
+          "info": {
+            "name": "Get submission",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/submission/:submissionId.json",
+            "params": [
+              {
+                "name": "submissionId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get submission"
+        },
+        {
+          "info": {
+            "name": "Update submission",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.formstack.com/api/v2/submission/:submissionId.json",
+            "params": [
+              {
+                "name": "submissionId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update submission"
+        },
+        {
+          "info": {
+            "name": "Delete submission",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.formstack.com/api/v2/submission/:submissionId.json",
+            "params": [
+              {
+                "name": "submissionId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete submission"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Confirmations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List confirmations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/form/:formId/confirmation.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List confirmations"
+        },
+        {
+          "info": {
+            "name": "Create confirmation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/form/:formId/confirmation.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create confirmation"
+        },
+        {
+          "info": {
+            "name": "Get confirmation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/confirmation/:confirmationId.json",
+            "params": [
+              {
+                "name": "confirmationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get confirmation"
+        },
+        {
+          "info": {
+            "name": "Update confirmation",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.formstack.com/api/v2/confirmation/:confirmationId.json",
+            "params": [
+              {
+                "name": "confirmationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update confirmation"
+        },
+        {
+          "info": {
+            "name": "Delete confirmation",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.formstack.com/api/v2/confirmation/:confirmationId.json",
+            "params": [
+              {
+                "name": "confirmationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete confirmation"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Notifications",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List notifications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/form/:formId/notification.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List notifications"
+        },
+        {
+          "info": {
+            "name": "Create notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/form/:formId/notification.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create notification"
+        },
+        {
+          "info": {
+            "name": "Get notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/notification/:notificationId.json",
+            "params": [
+              {
+                "name": "notificationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get notification"
+        },
+        {
+          "info": {
+            "name": "Update notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.formstack.com/api/v2/notification/:notificationId.json",
+            "params": [
+              {
+                "name": "notificationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update notification"
+        },
+        {
+          "info": {
+            "name": "Delete notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.formstack.com/api/v2/notification/:notificationId.json",
+            "params": [
+              {
+                "name": "notificationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete notification"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/form/:formId/webhook.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List webhooks"
+        },
+        {
+          "info": {
+            "name": "Create webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/form/:formId/webhook.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create webhook"
+        },
+        {
+          "info": {
+            "name": "Get webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/webhook/:webhookId.json",
+            "params": [
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get webhook"
+        },
+        {
+          "info": {
+            "name": "Update webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.formstack.com/api/v2/webhook/:webhookId.json",
+            "params": [
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update webhook"
+        },
+        {
+          "info": {
+            "name": "Delete webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.formstack.com/api/v2/webhook/:webhookId.json",
+            "params": [
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete webhook"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Folders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List folders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/folder.json"
+          },
+          "docs": "List folders"
+        },
+        {
+          "info": {
+            "name": "Create folder",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/folder.json"
+          },
+          "docs": "Create folder"
+        },
+        {
+          "info": {
+            "name": "Get folder",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/folder/:folderId.json",
+            "params": [
+              {
+                "name": "folderId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get folder"
+        },
+        {
+          "info": {
+            "name": "Update folder",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.formstack.com/api/v2/folder/:folderId.json",
+            "params": [
+              {
+                "name": "folderId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update folder"
+        },
+        {
+          "info": {
+            "name": "Delete folder",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.formstack.com/api/v2/folder/:folderId.json",
+            "params": [
+              {
+                "name": "folderId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete folder"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Subaccounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List subaccounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/subaccount.json"
+          },
+          "docs": "List subaccounts"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
