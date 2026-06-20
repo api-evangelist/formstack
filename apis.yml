@@ -10,7 +10,7 @@ description: >-
   product-specific surfaces for Formstack Documents, Formstack Sign, and
   Formstack Workflows. Authentication uses OAuth 2.0. Machine-readable indexes
   and OpenAPI artifacts are surfaced at developers.formstack.com/llms.txt.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Forms
   - Documents
