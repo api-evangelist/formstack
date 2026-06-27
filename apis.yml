@@ -150,9 +150,9 @@ common:
     url: https://www.formstack.com/
   - type: Documentation
     url: https://developers.formstack.com/
-  - type: Changelog
+  - type: ChangeLog
     url: https://developers.formstack.com/changelog
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://developers.formstack.com/llms.txt
   - type: LinkedIn
     url: https://www.linkedin.com/company/formstack
