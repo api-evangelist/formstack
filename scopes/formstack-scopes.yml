@@ -1,0 +1,36 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/formstack-openapi.yml
+schemes:
+- name: oauth2
+  source: openapi/formstack-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://www.formstack.com/api/v2/oauth2/authorize
+    tokenUrl: https://www.formstack.com/api/v2/oauth2/token
+  description: OAuth 2.0 authorization code flow.
+scopes:
+- scope: forms_read
+  description: Read forms
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/formstack-openapi.yml
+- scope: forms_write
+  description: Manage forms
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/formstack-openapi.yml
+- scope: submissions_read
+  description: Read submissions
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/formstack-openapi.yml
+- scope: submissions_write
+  description: Manage submissions
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/formstack-openapi.yml
