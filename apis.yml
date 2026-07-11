@@ -146,6 +146,14 @@ apis:
       - type: Documentation
         url: https://developers.formstack.com/reference/oauth2-authentication
 common:
+  - type: TrustCenter
+    url: security/formstack-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/formstack-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/formstack-domain-security.yml
+  - type: Authentication
+    url: authentication/formstack-authentication.yml
   - type: OAuthScopes
     url: scopes/formstack-scopes.yml
   - type: Website
