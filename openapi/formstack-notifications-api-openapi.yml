@@ -1,0 +1,102 @@
+openapi: 3.1.0
+info:
+  title: Formstack Confirmations Notifications API
+  description: 'REST API for Formstack — manage forms, fields, submissions, confirmations,
+
+    notifications, webhooks, themes, folders, portals, smart lists, subaccounts,
+
+    submit actions, and partial submissions. Authentication uses OAuth 2.0.
+
+
+    Detailed endpoint definitions are derived from the public developer portal
+
+    at https://developers.formstack.com/ (machine-readable index at
+
+    https://developers.formstack.com/llms.txt).
+
+    '
+  version: 2025.0
+  contact:
+    name: Formstack Developers
+    url: https://developers.formstack.com/
+servers:
+- url: https://www.formstack.com/api/v2
+  description: Production v2
+security:
+- oauth2: []
+tags:
+- name: Notifications
+paths:
+  /form/{formId}/notification.json:
+    parameters:
+    - $ref: '#/components/parameters/formId'
+    get:
+      summary: List notifications
+      operationId: listNotifications
+      tags:
+      - Notifications
+      responses:
+        '200':
+          description: Notifications.
+    post:
+      summary: Create notification
+      operationId: createNotification
+      tags:
+      - Notifications
+      responses:
+        '200':
+          description: Created.
+  /notification/{notificationId}.json:
+    parameters:
+    - $ref: '#/components/parameters/notificationId'
+    get:
+      summary: Get notification
+      operationId: getNotification
+      tags:
+      - Notifications
+      responses:
+        '200':
+          description: Notification.
+    put:
+      summary: Update notification
+      operationId: updateNotification
+      tags:
+      - Notifications
+      responses:
+        '200':
+          description: Updated.
+    delete:
+      summary: Delete notification
+      operationId: deleteNotification
+      tags:
+      - Notifications
+      responses:
+        '200':
+          description: Deleted.
+components:
+  parameters:
+    formId:
+      name: formId
+      in: path
+      required: true
+      schema:
+        type: string
+    notificationId:
+      name: notificationId
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: OAuth 2.0 authorization code flow.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://www.formstack.com/api/v2/oauth2/authorize
+          tokenUrl: https://www.formstack.com/api/v2/oauth2/token
+          scopes:
+            forms_read: Read forms
+            forms_write: Manage forms
+            submissions_read: Read submissions
+            submissions_write: Manage submissions

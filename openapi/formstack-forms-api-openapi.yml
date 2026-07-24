@@ -1,0 +1,147 @@
+openapi: 3.1.0
+info:
+  title: Formstack Confirmations Forms API
+  description: 'REST API for Formstack — manage forms, fields, submissions, confirmations,
+
+    notifications, webhooks, themes, folders, portals, smart lists, subaccounts,
+
+    submit actions, and partial submissions. Authentication uses OAuth 2.0.
+
+
+    Detailed endpoint definitions are derived from the public developer portal
+
+    at https://developers.formstack.com/ (machine-readable index at
+
+    https://developers.formstack.com/llms.txt).
+
+    '
+  version: 2025.0
+  contact:
+    name: Formstack Developers
+    url: https://developers.formstack.com/
+servers:
+- url: https://www.formstack.com/api/v2
+  description: Production v2
+security:
+- oauth2: []
+tags:
+- name: Forms
+paths:
+  /forms.json:
+    get:
+      summary: List forms
+      operationId: listForms
+      tags:
+      - Forms
+      parameters:
+      - $ref: '#/components/parameters/page'
+      - $ref: '#/components/parameters/per_page'
+      - name: folder
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Paginated list of forms.
+    post:
+      summary: Create a form
+      operationId: createForm
+      tags:
+      - Forms
+      responses:
+        '200':
+          description: Form created.
+  /form/{formId}.json:
+    parameters:
+    - $ref: '#/components/parameters/formId'
+    get:
+      summary: Get form
+      operationId: getForm
+      tags:
+      - Forms
+      responses:
+        '200':
+          description: Form.
+    put:
+      summary: Update form
+      operationId: updateForm
+      tags:
+      - Forms
+      responses:
+        '200':
+          description: Form updated.
+    delete:
+      summary: Delete form
+      operationId: deleteForm
+      tags:
+      - Forms
+      responses:
+        '200':
+          description: Form deleted.
+  /form/{formId}/html.json:
+    parameters:
+    - $ref: '#/components/parameters/formId'
+    get:
+      summary: Get form HTML
+      operationId: getFormHtml
+      tags:
+      - Forms
+      responses:
+        '200':
+          description: Form HTML.
+  /form/{formId}/copy.json:
+    parameters:
+    - $ref: '#/components/parameters/formId'
+    post:
+      summary: Copy form
+      operationId: copyForm
+      tags:
+      - Forms
+      responses:
+        '200':
+          description: Copied form.
+  /form/{formId}/prefill.json:
+    parameters:
+    - $ref: '#/components/parameters/formId'
+    post:
+      summary: Generate prefilled URL
+      operationId: prefillForm
+      tags:
+      - Forms
+      responses:
+        '200':
+          description: Prefilled URL generated.
+components:
+  parameters:
+    formId:
+      name: formId
+      in: path
+      required: true
+      schema:
+        type: string
+    page:
+      name: page
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+    per_page:
+      name: per_page
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: OAuth 2.0 authorization code flow.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://www.formstack.com/api/v2/oauth2/authorize
+          tokenUrl: https://www.formstack.com/api/v2/oauth2/token
+          scopes:
+            forms_read: Read forms
+            forms_write: Manage forms
+            submissions_read: Read submissions
+            submissions_write: Manage submissions
