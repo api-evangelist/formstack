@@ -10,7 +10,20 @@ description: >-
   product-specific surfaces for Formstack Documents, Formstack Sign, and
   Formstack Workflows. Authentication uses OAuth 2.0. Machine-readable indexes
   and OpenAPI artifacts are surfaced at developers.formstack.com/llms.txt.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/formstack.png
 tags:
   - Forms
   - Documents
@@ -22,129 +35,205 @@ created: '2026-05-23'
 modified: '2026-05-30'
 specificationVersion: '0.19'
 apis:
-  - aid: formstack:forms
-    name: Formstack Forms API
-    description: >-
-      REST API for creating, reading, updating, and deleting forms in a
-      Formstack account, including form configuration, styling, and access
-      rules.
-    humanURL: https://developers.formstack.com/reference/api-overview
-    baseURL: https://www.formstack.com/api/v2
-    tags:
-      - Forms
-      - REST
-    properties:
-      - type: Documentation
-        url: https://developers.formstack.com/reference/api-overview
-  - aid: formstack:submissions
-    name: Formstack Submissions API
-    description: >-
-      Read, create, update, and delete form submissions; supports filtering by
-      date, search, and field values. Returns submitted field data and
-      metadata.
-    humanURL: https://developers.formstack.com/reference/api-overview
-    baseURL: https://www.formstack.com/api/v2
-    tags:
-      - Submissions
-      - Data
-    properties:
-      - type: Documentation
-        url: https://developers.formstack.com/reference/api-overview
-  - aid: formstack:fields
-    name: Formstack Fields API
-    description: >-
-      Programmatically manage form fields - text, select, file upload, signature,
-      payment, calculation, and others - including ordering, validation, and
-      conditional logic.
-    humanURL: https://developers.formstack.com/reference/api-overview
-    baseURL: https://www.formstack.com/api/v2
-    tags:
-      - Fields
-      - Form Schema
-    properties:
-      - type: Documentation
-        url: https://developers.formstack.com/reference/api-overview
-  - aid: formstack:webhooks
-    name: Formstack Webhooks API
-    description: >-
-      Configure webhook subscriptions to receive submission events at a
-      customer-provided URL, with retry semantics for failed deliveries.
-    humanURL: https://developers.formstack.com/reference/api-overview
-    baseURL: https://www.formstack.com/api/v2
-    tags:
-      - Webhooks
-      - Events
-    properties:
-      - type: Documentation
-        url: https://developers.formstack.com/reference/api-overview
-      - type: AsyncAPI
-        url: https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/openapi/formstack-asyncapi.yml
-  - aid: formstack:folders
-    name: Formstack Folders API
-    description: >-
-      Manage folder organization for forms within a Formstack account.
-    humanURL: https://developers.formstack.com/reference/api-overview
-    baseURL: https://www.formstack.com/api/v2
-    tags:
-      - Folders
-      - Organization
-    properties:
-      - type: Documentation
-        url: https://developers.formstack.com/reference/api-overview
-  - aid: formstack:documents
-    name: Formstack Documents API
-    description: >-
-      Programmatic interface to Formstack Documents (formerly WebMerge) for
-      generating PDFs, Word docs, and other templated documents from data
-      payloads.
-    humanURL: https://developers.formstack.com/
-    baseURL: https://www.webmerge.me/api
-    tags:
-      - Documents
-      - Document Generation
-      - PDF
-    properties:
-      - type: Documentation
-        url: https://developers.formstack.com/
-  - aid: formstack:sign
-    name: Formstack Sign API
-    description: >-
-      Electronic signature API for sending documents for signature, tracking
-      status, and retrieving signed copies. Part of the Formstack Suite.
-    humanURL: https://developers.formstack.com/
-    baseURL: https://www.formstack.com/api/v2
-    tags:
-      - eSignature
-      - Sign
-    properties:
-      - type: Documentation
-        url: https://developers.formstack.com/
-  - aid: formstack:workflows
-    name: Formstack Workflows API
-    description: >-
-      Workflow automation surface for routing submissions, documents, and
-      approvals across multi-step business processes.
-    humanURL: https://developers.formstack.com/
-    baseURL: https://www.formstack.com/api/v2
-    tags:
-      - Workflows
-      - Automation
-    properties:
-      - type: Documentation
-        url: https://developers.formstack.com/
-  - aid: formstack:oauth2
-    name: Formstack OAuth 2.0
-    description: >-
-      OAuth 2.0 authorization server used to authenticate API clients and
-      issue access tokens for the Formstack REST API.
-    humanURL: https://developers.formstack.com/reference/oauth2-authentication
-    baseURL: https://www.formstack.com/api/v2/oauth2
-    tags:
-      - OAuth2
-      - Authentication
-    properties:
-      - type: Documentation
-        url: https://developers.formstack.com/reference/oauth2-authentication
+- aid: formstack:forms
+  name: Formstack Forms API
+  description: >-
+    REST API for creating, reading, updating, and deleting forms in a Formstack account, including form
+    configuration, styling, and access rules.
+  humanURL: https://developers.formstack.com/reference/api-overview
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Forms
+  - REST
+  properties:
+  - type: Documentation
+    url: https://developers.formstack.com/reference/api-overview
+- aid: formstack:submissions
+  name: Formstack Submissions API
+  description: >-
+    Read, create, update, and delete form submissions; supports filtering by date, search, and field values.
+    Returns submitted field data and metadata.
+  humanURL: https://developers.formstack.com/reference/api-overview
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Submissions
+  - Data
+  properties:
+  - type: Documentation
+    url: https://developers.formstack.com/reference/api-overview
+- aid: formstack:fields
+  name: Formstack Fields API
+  description: >-
+    Programmatically manage form fields - text, select, file upload, signature, payment, calculation,
+    and others - including ordering, validation, and conditional logic.
+  humanURL: https://developers.formstack.com/reference/api-overview
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Fields
+  - Form Schema
+  properties:
+  - type: Documentation
+    url: https://developers.formstack.com/reference/api-overview
+- aid: formstack:webhooks
+  name: Formstack Webhooks API
+  description: >-
+    Configure webhook subscriptions to receive submission events at a customer-provided URL, with retry
+    semantics for failed deliveries.
+  humanURL: https://developers.formstack.com/reference/api-overview
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Webhooks
+  - Events
+  properties:
+  - type: Documentation
+    url: https://developers.formstack.com/reference/api-overview
+  - type: AsyncAPI
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/openapi/formstack-asyncapi.yml
+- aid: formstack:folders
+  name: Formstack Folders API
+  description: Manage folder organization for forms within a Formstack account.
+  humanURL: https://developers.formstack.com/reference/api-overview
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Folders
+  - Organization
+  properties:
+  - type: Documentation
+    url: https://developers.formstack.com/reference/api-overview
+- aid: formstack:documents
+  name: Formstack Documents API
+  description: >-
+    Programmatic interface to Formstack Documents (formerly WebMerge) for generating PDFs, Word docs,
+    and other templated documents from data payloads.
+  humanURL: https://developers.formstack.com/
+  baseURL: https://www.webmerge.me/api
+  tags:
+  - Documents
+  - Document Generation
+  - PDF
+  properties:
+  - type: Documentation
+    url: https://developers.formstack.com/
+- aid: formstack:sign
+  name: Formstack Sign API
+  description: >-
+    Electronic signature API for sending documents for signature, tracking status, and retrieving signed
+    copies. Part of the Formstack Suite.
+  humanURL: https://developers.formstack.com/
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - eSignature
+  - Sign
+  properties:
+  - type: Documentation
+    url: https://developers.formstack.com/
+- aid: formstack:workflows
+  name: Formstack Workflows API
+  description: >-
+    Workflow automation surface for routing submissions, documents, and approvals across multi-step business
+    processes.
+  humanURL: https://developers.formstack.com/
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Workflows
+  - Automation
+  properties:
+  - type: Documentation
+    url: https://developers.formstack.com/
+- aid: formstack:oauth2
+  name: Formstack OAuth 2.0
+  description: >-
+    OAuth 2.0 authorization server used to authenticate API clients and issue access tokens for the Formstack
+    REST API.
+  humanURL: https://developers.formstack.com/reference/oauth2-authentication
+  baseURL: https://www.formstack.com/api/v2/oauth2
+  tags:
+  - OAuth2
+  - Authentication
+  properties:
+  - type: Documentation
+    url: https://developers.formstack.com/reference/oauth2-authentication
+- aid: formstack:formstack-confirmations-api
+  name: Formstack Confirmations API
+  description: The Confirmations API from Formstack — 2 operation(s) for confirmations.
+  humanURL: https://developers.formstack.com/reference/api-overview
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Confirmations
+  properties:
+  - type: OpenAPI
+    url: openapi/formstack-confirmations-api-openapi.yml
+- aid: formstack:formstack-fields-api
+  name: Formstack Fields API
+  description: The Fields API from Formstack — 2 operation(s) for fields.
+  humanURL: https://developers.formstack.com/reference/api-overview
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Fields
+  properties:
+  - type: OpenAPI
+    url: openapi/formstack-fields-api-openapi.yml
+- aid: formstack:formstack-folders-api
+  name: Formstack Folders API
+  description: The Folders API from Formstack — 2 operation(s) for folders.
+  humanURL: https://developers.formstack.com/reference/api-overview
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Folders
+  properties:
+  - type: OpenAPI
+    url: openapi/formstack-folders-api-openapi.yml
+- aid: formstack:formstack-forms-api
+  name: Formstack Forms API
+  description: The Forms API from Formstack — 5 operation(s) for forms.
+  humanURL: https://developers.formstack.com/reference/api-overview
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Forms
+  properties:
+  - type: OpenAPI
+    url: openapi/formstack-forms-api-openapi.yml
+- aid: formstack:formstack-notifications-api
+  name: Formstack Notifications API
+  description: The Notifications API from Formstack — 2 operation(s) for notifications.
+  humanURL: https://developers.formstack.com/reference/api-overview
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Notifications
+  properties:
+  - type: OpenAPI
+    url: openapi/formstack-notifications-api-openapi.yml
+- aid: formstack:formstack-subaccounts-api
+  name: Formstack Subaccounts API
+  description: The Subaccounts API from Formstack — 1 operation(s) for subaccounts.
+  humanURL: https://developers.formstack.com/reference/api-overview
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Subaccounts
+  properties:
+  - type: OpenAPI
+    url: openapi/formstack-subaccounts-api-openapi.yml
+- aid: formstack:formstack-submissions-api
+  name: Formstack Submissions API
+  description: The Submissions API from Formstack — 2 operation(s) for submissions.
+  humanURL: https://developers.formstack.com/reference/api-overview
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Submissions
+  properties:
+  - type: OpenAPI
+    url: openapi/formstack-submissions-api-openapi.yml
+- aid: formstack:formstack-webhooks-api
+  name: Formstack Webhooks API
+  description: The Webhooks API from Formstack — 2 operation(s) for webhooks.
+  humanURL: https://developers.formstack.com/reference/api-overview
+  baseURL: https://www.formstack.com/api/v2
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/formstack-webhooks-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/formstack-agentic-access.yml
