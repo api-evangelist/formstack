@@ -1,0 +1,28 @@
+{
+  "provider": "formstack",
+  "sources": [
+    "formstack-confirmations-api-openapi.yml",
+    "formstack-fields-api-openapi.yml",
+    "formstack-folders-api-openapi.yml",
+    "formstack-forms-api-openapi.yml",
+    "formstack-notifications-api-openapi.yml",
+    "formstack-subaccounts-api-openapi.yml",
+    "formstack-submissions-api-openapi.yml",
+    "formstack-webhooks-api-openapi.yml"
+  ],
+  "outputs": [
+    "formstack-confirmations-api-openapi.yml",
+    "formstack-fields-api-openapi.yml",
+    "formstack-folders-api-openapi.yml",
+    "formstack-forms-api-openapi.yml",
+    "formstack-notifications-api-openapi.yml",
+    "formstack-subaccounts-api-openapi.yml",
+    "formstack-submissions-api-openapi.yml",
+    "formstack-webhooks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
