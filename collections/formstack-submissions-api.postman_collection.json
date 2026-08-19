@@ -1,0 +1,472 @@
+{
+  "item": [
+    {
+      "id": "92c4b471-b5b3-42a9-83ab-ec5661fc86a0",
+      "name": "Submissions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ff10deba-4023-4e98-aa39-8d2ae3719627",
+          "name": "List submissions for a form",
+          "request": {
+            "name": "List submissions for a form",
+            "description": {},
+            "url": {
+              "path": [
+                "form",
+                ":formId",
+                "submission.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "min_time",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max_time",
+                  "value": "<dateTime>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "formId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a2bf932f-2723-4d86-8ad5-f5cc670c4646",
+              "name": "Submissions.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "form",
+                    ":formId",
+                    "submission.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "min_time",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "max_time",
+                      "value": "<dateTime>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "formId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c2f5af22-3d9e-4f39-a928-4ad7a8dfb3c6",
+          "name": "Create submission",
+          "request": {
+            "name": "Create submission",
+            "description": {},
+            "url": {
+              "path": [
+                "form",
+                ":formId",
+                "submission.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "formId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7a659828-3951-48da-bd6c-d73ea79b6749",
+              "name": "Submission created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "form",
+                    ":formId",
+                    "submission.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "formId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bd8e1ff2-88c3-4e07-90a8-01454795bd7e",
+          "name": "Get submission",
+          "request": {
+            "name": "Get submission",
+            "description": {},
+            "url": {
+              "path": [
+                "submission",
+                "{{submissionId}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "41c8cf21-a058-46a3-9b98-d2070aced2c3",
+              "name": "Submission.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "submission",
+                    "{{submissionId}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "da3c8fde-7640-40b6-abce-a5f36eae8b3f",
+          "name": "Update submission",
+          "request": {
+            "name": "Update submission",
+            "description": {},
+            "url": {
+              "path": [
+                "submission",
+                "{{submissionId}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c3f17fa4-1517-4c82-9d01-86fd6c43e2f1",
+              "name": "Submission updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "submission",
+                    "{{submissionId}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5a1ff85d-bbd5-43d3-8310-99480d390469",
+          "name": "Delete submission",
+          "request": {
+            "name": "Delete submission",
+            "description": {},
+            "url": {
+              "path": [
+                "submission",
+                "{{submissionId}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e2b5b740-e866-4675-8671-3beb6e888a3c",
+              "name": "Submission deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "submission",
+                    "{{submissionId}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.formstack.com/api/v2",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "submissionId"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "forms_read forms_write submissions_read submissions_write"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://www.formstack.com/api/v2/oauth2/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://www.formstack.com/api/v2/oauth2/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "f7fa5549-4f39-4718-81e7-d54f82207542",
+    "name": "Formstack Confirmations Submissions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Formstack — manage forms, fields, submissions, confirmations,\nnotifications, webhooks, themes, folders, portals, smart lists, subaccounts,\nsubmit actions, and partial submissions. Authentication uses OAuth 2.0.\n\nDetailed endpoint definitions are derived from the public developer portal\nat https://developers.formstack.com/ (machine-readable index at\nhttps://developers.formstack.com/llms.txt).\n\n\nContact Support:\n Name: Formstack Developers",
+      "type": "text/plain"
+    }
+  }
+}

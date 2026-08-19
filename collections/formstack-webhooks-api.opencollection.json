@@ -1,0 +1,120 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Formstack Confirmations Webhooks API",
+    "version": "2025"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://www.formstack.com/api/v2/oauth2/authorize",
+      "accessTokenUrl": "https://www.formstack.com/api/v2/oauth2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/form/:formId/webhook.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List webhooks"
+        },
+        {
+          "info": {
+            "name": "Create webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/form/:formId/webhook.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create webhook"
+        },
+        {
+          "info": {
+            "name": "Get webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/webhook/:webhookId.json",
+            "params": [
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get webhook"
+        },
+        {
+          "info": {
+            "name": "Update webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.formstack.com/api/v2/webhook/:webhookId.json",
+            "params": [
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update webhook"
+        },
+        {
+          "info": {
+            "name": "Delete webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.formstack.com/api/v2/webhook/:webhookId.json",
+            "params": [
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete webhook"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

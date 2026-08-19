@@ -1,0 +1,120 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Formstack Confirmations Fields API",
+    "version": "2025"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://www.formstack.com/api/v2/oauth2/authorize",
+      "accessTokenUrl": "https://www.formstack.com/api/v2/oauth2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Fields",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/form/:formId/field.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List fields"
+        },
+        {
+          "info": {
+            "name": "Create field",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/form/:formId/field.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create field"
+        },
+        {
+          "info": {
+            "name": "Get field",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/field/:fieldId.json",
+            "params": [
+              {
+                "name": "fieldId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get field"
+        },
+        {
+          "info": {
+            "name": "Update field",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.formstack.com/api/v2/field/:fieldId.json",
+            "params": [
+              {
+                "name": "fieldId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update field"
+        },
+        {
+          "info": {
+            "name": "Delete field",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.formstack.com/api/v2/field/:fieldId.json",
+            "params": [
+              {
+                "name": "fieldId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete field"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

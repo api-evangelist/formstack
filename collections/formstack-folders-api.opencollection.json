@@ -1,0 +1,106 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Formstack Confirmations Folders API",
+    "version": "2025"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://www.formstack.com/api/v2/oauth2/authorize",
+      "accessTokenUrl": "https://www.formstack.com/api/v2/oauth2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Folders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List folders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/folder.json"
+          },
+          "docs": "List folders"
+        },
+        {
+          "info": {
+            "name": "Create folder",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/folder.json"
+          },
+          "docs": "Create folder"
+        },
+        {
+          "info": {
+            "name": "Get folder",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/folder/:folderId.json",
+            "params": [
+              {
+                "name": "folderId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get folder"
+        },
+        {
+          "info": {
+            "name": "Update folder",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.formstack.com/api/v2/folder/:folderId.json",
+            "params": [
+              {
+                "name": "folderId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update folder"
+        },
+        {
+          "info": {
+            "name": "Delete folder",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.formstack.com/api/v2/folder/:folderId.json",
+            "params": [
+              {
+                "name": "folderId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete folder"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,394 @@
+{
+  "item": [
+    {
+      "id": "f701e713-43be-442d-993f-aba32b611868",
+      "name": "Folders",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fb088b7a-6ecf-4578-a289-d79206632479",
+          "name": "List folders",
+          "request": {
+            "name": "List folders",
+            "description": {},
+            "url": {
+              "path": [
+                "folder.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c7617d84-1085-4593-9dbb-6e8bf88fd740",
+              "name": "Folders.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "folder.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d75aa0d7-ee55-4d37-9358-8f40ea19f515",
+          "name": "Create folder",
+          "request": {
+            "name": "Create folder",
+            "description": {},
+            "url": {
+              "path": [
+                "folder.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f8092b9a-c0a8-4dde-978d-5ff16ba65fac",
+              "name": "Created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "folder.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "04cdb96f-52f7-4f5d-bcc6-b1d11b0ebf45",
+          "name": "Get folder",
+          "request": {
+            "name": "Get folder",
+            "description": {},
+            "url": {
+              "path": [
+                "folder",
+                "{{folderId}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "89de9536-d20e-4acb-a1e5-becf3be2082f",
+              "name": "Folder.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "folder",
+                    "{{folderId}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "76b807fc-83cb-4c9b-8603-75a6899f6a22",
+          "name": "Update folder",
+          "request": {
+            "name": "Update folder",
+            "description": {},
+            "url": {
+              "path": [
+                "folder",
+                "{{folderId}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "375ce039-e926-45a5-b6cb-e43707a312f1",
+              "name": "Updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "folder",
+                    "{{folderId}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fd8533e6-d880-484d-9aa5-d9fecb839c87",
+          "name": "Delete folder",
+          "request": {
+            "name": "Delete folder",
+            "description": {},
+            "url": {
+              "path": [
+                "folder",
+                "{{folderId}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ca0c73fe-db4a-460f-a6b6-804d6dc67844",
+              "name": "Deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "folder",
+                    "{{folderId}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.formstack.com/api/v2",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "folderId"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "forms_read forms_write submissions_read submissions_write"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://www.formstack.com/api/v2/oauth2/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://www.formstack.com/api/v2/oauth2/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "38575e11-1873-4ff7-8290-4680bb153dfd",
+    "name": "Formstack Confirmations Folders API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Formstack — manage forms, fields, submissions, confirmations,\nnotifications, webhooks, themes, folders, portals, smart lists, subaccounts,\nsubmit actions, and partial submissions. Authentication uses OAuth 2.0.\n\nDetailed endpoint definitions are derived from the public developer portal\nat https://developers.formstack.com/ (machine-readable index at\nhttps://developers.formstack.com/llms.txt).\n\n\nContact Support:\n Name: Formstack Developers",
+      "type": "text/plain"
+    }
+  }
+}

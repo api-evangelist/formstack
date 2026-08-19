@@ -1,0 +1,120 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Formstack Confirmations API",
+    "version": "2025"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://www.formstack.com/api/v2/oauth2/authorize",
+      "accessTokenUrl": "https://www.formstack.com/api/v2/oauth2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Confirmations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List confirmations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/form/:formId/confirmation.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List confirmations"
+        },
+        {
+          "info": {
+            "name": "Create confirmation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/form/:formId/confirmation.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create confirmation"
+        },
+        {
+          "info": {
+            "name": "Get confirmation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/confirmation/:confirmationId.json",
+            "params": [
+              {
+                "name": "confirmationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get confirmation"
+        },
+        {
+          "info": {
+            "name": "Update confirmation",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.formstack.com/api/v2/confirmation/:confirmationId.json",
+            "params": [
+              {
+                "name": "confirmationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update confirmation"
+        },
+        {
+          "info": {
+            "name": "Delete confirmation",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.formstack.com/api/v2/confirmation/:confirmationId.json",
+            "params": [
+              {
+                "name": "confirmationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete confirmation"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

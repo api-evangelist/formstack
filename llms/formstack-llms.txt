@@ -1,0 +1,136 @@
+# Formstack Documentation
+
+> The Formstack API allows users and 3rd party applications to access Formstack resources programmatically. This API conforms to REST principals.
+
+## API Reference
+- [Overview](https://developers.formstack.com/reference/api-overview.md): The Formstack API allows users and 3rd party application to access resources programmatically. This API conforms to REST principals.
+- [Authentication](https://developers.formstack.com/reference/authentication.md)
+- [Confirmation Emails](https://developers.formstack.com/reference/confirmation-emails.md): Confirmation emails are the messages sent to the person who submits a form. Use these endpoints to list a form's confirmation emails and to create, retrieve, update, and delete them, including subject, sender, content, send delay, and conditional logic.
+- [/confirmations/{confirmationId}](https://developers.formstack.com/reference/getconfirmation-1.md): Retrieve detailed information for a specific confirmation email
+- [/confirmations/{confirmationId}](https://developers.formstack.com/reference/updateconfirmationemail-1.md): Update an existing confirmation email
+- [/confirmations/{confirmationId}](https://developers.formstack.com/reference/deleteconfirmationemail-1.md): Delete a specific confirmation email
+- [/forms/{formId}/confirmations](https://developers.formstack.com/reference/getformconfirmationemails-1.md): Retrieve all confirmation emails associated with a form
+- [/forms/{formId}/confirmations](https://developers.formstack.com/reference/createconfirmationemail-1.md): Create a new confirmation email for a form
+- [Folders](https://developers.formstack.com/reference/folders.md): Folders organize the forms in an account. Use these endpoints to list folders, retrieve a folder, and create, rename, or delete folders. The API exposes a single level of nesting (a folder and its direct subfolders).
+- [/folders/{folderId}](https://developers.formstack.com/reference/getfolder-1.md): Get details for the specified folder or subfolder.
+- [/folders/{folderId}](https://developers.formstack.com/reference/editfolder-1.md): Update the specified folder.
+- [/folders/{folderId}](https://developers.formstack.com/reference/deletefolder-1.md): Delete the specified folder.
+- [/folders](https://developers.formstack.com/reference/listfolders-1.md): Get all folders on your account and their subfolders.
+- [/folders](https://developers.formstack.com/reference/createfolder-1.md): Create a new folder
+- [Notification Emails](https://developers.formstack.com/reference/notification-emails.md): Notification emails alert your team when a form is submitted. Use these endpoints to list a form's notification emails and to create, retrieve, update, and delete them, including recipients, sender, subject, message content, file-attachment limits, and conditional logic.
+- [/notifications/{notificationId}](https://developers.formstack.com/reference/getnotification-1.md): Get details for the specified notification email
+- [/notifications/{notificationId}](https://developers.formstack.com/reference/updatenotificationemail-1.md): Update a notification email
+- [/notifications/{notificationId}](https://developers.formstack.com/reference/deletenotificationemail-1.md): Delete a notification email
+- [/forms/{formId}/notifications](https://developers.formstack.com/reference/getformnotificationemails-1.md): Get notification emails for a form
+- [/forms/{formId}/notifications](https://developers.formstack.com/reference/createnotificationemail-1.md): Create a form notification email
+- [Fields](https://developers.formstack.com/reference/fields.md): Fields define what a form collects. Use these endpoints to list a form's fields and to create, retrieve, update, and delete individual fields. Field configuration covers labels, types, validation, default values, conditional logic, and layout.
+- [/forms/{formId}/fields/{fieldId}](https://developers.formstack.com/reference/getfielddetails-1.md): Retrieve detailed information about a specific field
+- [/forms/{formId}/fields/{fieldId}](https://developers.formstack.com/reference/editfield-1.md): Update an existing field within the specified form
+- [/forms/{formId}/fields/{fieldId}](https://developers.formstack.com/reference/deletefield-1.md): Permanently delete a field from the specified form
+- [/forms/{formId}/fields](https://developers.formstack.com/reference/getformfields-1.md): Retrieve all fields from a form
+- [/forms/{formId}/fields](https://developers.formstack.com/reference/createfieldinform-1.md): Create a new field within the specified form
+- [Forms](https://developers.formstack.com/reference/forms.md): Forms are the core resource of the Formstack API. Use these endpoints to create, retrieve, update, copy, and delete forms, list the forms in an account with filtering and sorting, generate prefilled form URLs, and fetch the embed JavaScript or rendered HTML for a form. Most other resources—fields, submissions, emails, and submit actions—are scoped to a form.
+- [/forms/{formId}](https://developers.formstack.com/reference/getformdetails-1.md): Retrieve detailed information about a specific form
+- [/forms/{formId}](https://developers.formstack.com/reference/editform-1.md): Update an existing form's properties
+- [/forms/{formId}](https://developers.formstack.com/reference/deleteform-1.md): Soft delete a form (mark as deleted)
+- [/forms](https://developers.formstack.com/reference/getformslist-1.md): Retrieve a paginated list of forms with optional filtering and sorting
+- [/forms](https://developers.formstack.com/reference/createform-1.md): Create a new form with optional fields
+- [/forms/{formId}/copy](https://developers.formstack.com/reference/copyform-1.md): Create a copy of an existing form with optional configurations
+- [/forms/{formId}/prefill](https://developers.formstack.com/reference/createformprefill-1.md): Generate a prefilled form URL with specified field values
+- [/forms/{formId}/html](https://developers.formstack.com/reference/getformhtml-1.md): Retrieve HTML markup for a specific form
+- [Smart List](https://developers.formstack.com/reference/smart-list.md): Smart Lists are reusable sets of options that can be shared across fields and forms, so option sets are maintained in one place rather than per field. Use these endpoints to list smart lists and to create, retrieve, update, and delete a smart list.
+- [/smartlists/{smartListId}/bulkoptions](https://developers.formstack.com/reference/createbulksmartlistoptions-1.md)
+- [/smartlists](https://developers.formstack.com/reference/listsmartlists-1.md)
+- [/smartlists](https://developers.formstack.com/reference/createsmartlist-1.md)
+- [/smartlists/{smartListId}](https://developers.formstack.com/reference/getsmartlist-1.md)
+- [/smartlists/{smartListId}](https://developers.formstack.com/reference/updatesmartlist-1.md)
+- [/smartlists/{smartListId}](https://developers.formstack.com/reference/deletesmartlist-1.md)
+- [/smartlists/{smartListId}/options](https://developers.formstack.com/reference/createsmartlistoption-1.md)
+- [/smartlists/{smartListId}/options/{optionId}](https://developers.formstack.com/reference/updatesmartlistoption-1.md)
+- [/smartlists/{smartListId}/options/{optionId}/image](https://developers.formstack.com/reference/uploadsmartlistoptionimage-1.md)
+- [PartialSubmissions](https://developers.formstack.com/reference/partialsubmissions.md): Partial submissions capture form data that a respondent entered but did not finish submitting (Save & Resume / abandoned entries). Use these endpoints to list and search a form's partial submissions, retrieve the details of one, and delete partial submissions.
+- [/partialsubmission/{partialSubmissionId}](https://developers.formstack.com/reference/getpartialsubmissiondetails-1.md): Get detailed information about a partial submission
+- [/partialsubmission/{partialSubmissionId}](https://developers.formstack.com/reference/deletepartialsubmission-1.md): Delete a partial submission
+- [/form/{formId}/partialsubmission](https://developers.formstack.com/reference/getpartialsubmissionslist-1.md): Get a list of partial submissions for a form
+- [Smart List Options](https://developers.formstack.com/reference/smart-list-options.md): Smart List Options are the individual entries that make up a Smart List. Use these endpoints to list a smart list's options, add, retrieve, update, and delete an option, clear all of a list's options, bulk-add a set of options to a list, and upload or remove an option's image.
+- [/smartlists/{smartListId}/options](https://developers.formstack.com/reference/listsmartlistoptions-1.md)
+- [/smartlists/{smartListId}/alloptions](https://developers.formstack.com/reference/deleteallsmartlistoptions-1.md)
+- [/smartlists/{smartListId}/options/{optionId}](https://developers.formstack.com/reference/getsmartlistoption-1.md)
+- [/smartlists/{smartListId}/options/{optionId}](https://developers.formstack.com/reference/deletesmartlistoption-1.md)
+- [/smartlists/{smartListId}/options/{optionId}/image](https://developers.formstack.com/reference/deletesmartlistoptionimage-1.md)
+- [Portals](https://developers.formstack.com/reference/portals.md): Portals provide a branded hub where users access a curated collection of forms. Use these endpoints to manage a portal and its forms and users—copying (to create new portals), editing, and deleting portals, adding, editing, and removing portal forms, managing portal users, and setting or removing the portal avatar.
+- [/portal/{portalId}/avatar](https://developers.formstack.com/reference/createportalavatar-1.md): Create the portal avatar
+- [/portal/{portalId}/avatar](https://developers.formstack.com/reference/deleteportalavatar-1.md): Delete the portal avatar.
+- [/portal/{portalId}/copy](https://developers.formstack.com/reference/createportalcopy-1.md): Create the portal copy
+- [/portal/{portalId}/form](https://developers.formstack.com/reference/createportalform-1.md): Create the portal form.
+- [/portal/{portalId}/user](https://developers.formstack.com/reference/createportaluser-1.md): Create the portal user
+- [/portal/{portalId}](https://developers.formstack.com/reference/getportal-1.md): Retrieve detailed information for a specific portal, including associated forms and users.
+- [/portal/{portalId}](https://developers.formstack.com/reference/editportal-1.md): Edit the portal
+- [/portal/{portalId}](https://developers.formstack.com/reference/deleteportal-1.md): Permanently delete a specific portal.
+- [/portal/{portalId}/form/{formId}](https://developers.formstack.com/reference/editportalform-1.md): Edit the portal form
+- [/portal/{portalId}/form/{formId}](https://developers.formstack.com/reference/deleteportalform-1.md): Delete a form from the portal.
+- [/portal/{portalId}/user/{userId}](https://developers.formstack.com/reference/editportaluser-1.md): Edit the portal user
+- [/portal/{portalId}/user/{userId}](https://developers.formstack.com/reference/deleteportaluser-1.md): Remove a user from the portal.
+- [/portal](https://developers.formstack.com/reference/listportals-1.md): Retrieve a list of all portals associated with your account.
+- [Submit Actions](https://developers.formstack.com/reference/submit-action.md): Submit actions define what happens after a form is submitted—standard processing, displaying a custom message, redirecting to a URL, or running a third-party integration such as WebMerge. Use these endpoints to list a form's submit actions and to create, retrieve, update, and delete them, including the conditional logic that controls when each action runs.
+- [/forms/{formId}/integrations/webmerge](https://developers.formstack.com/reference/createformwebmergeintegration-1.md): Create a form WebMerge integration
+- [/forms/{formId}/submitactions](https://developers.formstack.com/reference/listsubmitactions-1.md): Retrieve all submit actions configured for a specific form
+- [/forms/{formId}/submitactions](https://developers.formstack.com/reference/createsubmitaction-1.md): Create a new submit action that defines what happens after a form is submitted
+- [/forms/{formId}/submitactions/{submitActionId}](https://developers.formstack.com/reference/getsubmitaction-1.md): Retrieve detailed information about a specific submit action
+- [/forms/{formId}/submitactions/{submitActionId}](https://developers.formstack.com/reference/updatesubmitaction-1.md): Update the configuration of an existing submit action
+- [/forms/{formId}/submitactions/{submitActionId}](https://developers.formstack.com/reference/deletesubmitaction-1.md): Permanently remove a submit action from a form
+- [Subaccounts](https://developers.formstack.com/reference/subaccounts.md): Subaccounts let a parent account manage separate child accounts. Use these endpoints to list subaccounts and to work with subaccount-scoped resources: copy a form into a subaccount, list a subaccount's themes, copy or delete a subaccount theme, list the forms using a subaccount theme, and assign a theme to a subaccount form. Subaccount records include details such as SMTP credentials.
+- [/subaccount/{subaccountId}/themes/{themeId}](https://developers.formstack.com/reference/deletesubaccounttheme.md): Delete a theme from the specified subaccount. Forms using this theme will be switched to the default theme.
+- [/subaccount/{subaccountId}/form/{formId}/copy](https://developers.formstack.com/reference/subaccountcopyform-1.md): Copies a form from the current account to a specified subaccount
+- [/subaccount](https://developers.formstack.com/reference/listsubaccounts-1.md): Retrieves a list of all subaccounts associated with the current account
+- [/subaccount/{subaccountId}/forms/{formId}/theme](https://developers.formstack.com/reference/assignthemetosubaccountform.md): Assign a theme to a specific form in the subaccount
+- [/subaccount/{subaccountId}/theme/{themeId}/copy](https://developers.formstack.com/reference/copythemetosubaccount.md): Copies a theme from the current account to a specified subaccount
+- [/subaccount/{subaccountId}/themes/{themeId}/forms](https://developers.formstack.com/reference/getsubaccountthemeformlist.md): Get a paginated list of forms using the specified theme in the subaccount
+- [/subaccount/{subaccountId}/themes](https://developers.formstack.com/reference/getsubaccountthemes.md): Get a paginated list of themes available in the specified subaccount
+- [Submissions](https://developers.formstack.com/reference/submissions.md): Submissions are the entries collected by your forms. Use these endpoints to create a submission, list submissions across all forms or for a specific form, count submissions, retrieve a single submission's data, edit or delete a submission, download uploaded files, and generate presigned URLs for direct file uploads. Results support pagination, date ranges, and field-level search.
+- [/forms/{formId}/submissions/count](https://developers.formstack.com/reference/countformsubmissions-1.md): Counting form submissions
+- [/forms/{formId}/submissions](https://developers.formstack.com/reference/getformsubmissionslist-1.md): Retrieve a paginated list of submissions for a specific form
+- [/forms/{formId}/submissions](https://developers.formstack.com/reference/createsubmission-1.md): Create a new submission for the specified form
+- [/submissions/{submissionId}](https://developers.formstack.com/reference/getsubmissiondetails-1.md): Retrieve detailed information about a specific submission
+- [/submissions/{submissionId}](https://developers.formstack.com/reference/editsubmission-1.md): Update an existing submission with new data
+- [/submissions/{submissionId}](https://developers.formstack.com/reference/deletesubmission-1.md): Permanently delete a submission and all associated data
+- [/submissions/{submissionId}/upload](https://developers.formstack.com/reference/getsubmissionupload-1.md): Retrieve uploaded file from a submission
+- [/submissions](https://developers.formstack.com/reference/getsubmissionslist-1.md): Retrieve a paginated list of submissions across all forms
+- [/forms/{formId}/fields/{fieldId}/upload-urls](https://developers.formstack.com/reference/createfileuploadurls.md): Generate presigned S3 upload URLs for a file field. Upload each file directly to its returned `uploadUrl` with an HTTP PUT (bypassing the request-body size limit), then submit the matching `fileKey` as the field's `subvalue` when creating the submission. Presigned URLs expire after 2 hours.
+- [Themes](https://developers.formstack.com/reference/themes.md): Themes control the visual styling applied to forms. Use these endpoints to list the themes in an account, copy a theme, delete a theme, list the forms using a theme, and assign a theme to a form. Deleting a theme switches its forms to the default theme.
+- [/forms/{formId}/theme](https://developers.formstack.com/reference/mainassignthemetoform.md): Assign a theme to a specific form in the current account
+- [/themes/{themeId}/copy](https://developers.formstack.com/reference/maincopytheme-1.md): Copies a theme within the current account (creates a duplicate)
+- [/themes/{themeId}](https://developers.formstack.com/reference/maindeletetheme.md): Delete a custom theme from the current account. Forms using this theme will be switched to the default theme.
+- [/themes](https://developers.formstack.com/reference/maingetaccountthemes.md): Get a paginated list of themes available in the current account
+- [Webhooks](https://developers.formstack.com/reference/webhook.md): Webhooks push submission data to an external URL in real time as forms are submitted. Use these endpoints to list a form's webhooks and to create, retrieve, update, and delete them, configure payload format, HMAC signing, and failure notifications, and fetch the generated OpenAPI definition describing a webhook's payload.
+- [/forms/{formId}/webhooks](https://developers.formstack.com/reference/listwebhooks-1.md): List webhooks for a form
+- [/forms/{formId}/webhooks](https://developers.formstack.com/reference/createwebhook-1.md): Create a new webhook for a form
+- [/forms/{formId}/webhooks/{webhookId}](https://developers.formstack.com/reference/getwebhook-1.md): Get webhook details
+- [/forms/{formId}/webhooks/{webhookId}](https://developers.formstack.com/reference/updatewebhook-1.md): Update an existing webhook
+- [/forms/{formId}/webhooks/{webhookId}](https://developers.formstack.com/reference/deletewebhook-1.md): Delete a webhook
+- [/forms/{formId}/webhooks/openapi](https://developers.formstack.com/reference/getwebhookopenapi-1.md): Get OpenAPI definition for a form's webhook
+- [Submit Actions](https://developers.formstack.com/reference/submitactions.md): Submit actions define what happens after a form is submitted—standard processing, displaying a custom message, or redirecting to a URL. Use these endpoints to list a form's submit actions and to create, retrieve, update, and delete them, including the conditional logic that controls when each action runs. (Third-party integrations such as WebMerge are managed separately under Form Integrations.)
+- [/organizations/{organizationId}/subaccounts](https://developers.formstack.com/reference/listsubaccounts.md): Get a list of subaccounts
+- [/organizations/{organizationId}/subaccounts/{subaccountId}/sso/config](https://developers.formstack.com/reference/showssoconfig.md): Returns current Organization's SSO config
+- [/organizations/{organizationId}/subaccounts/{subaccountId}/app-api-keys](https://developers.formstack.com/reference/getsubaccountappapikeys.md): Get app API keys for a subaccount
+- [/organizations/{organizationId}/subaccounts/products](https://developers.formstack.com/reference/listsubaccountprovisioningavailableproducts.md): Get a list of products available for provisioning
+- [/organizations/{organizationId}/subaccounts/preview](https://developers.formstack.com/reference/createnewsubaccountpreview.md)
+- [/organizations/{organizationId}/subaccounts](https://developers.formstack.com/reference/createnewsubaccount.md)
+- [/organizations/{organizationId}/subaccounts/{subaccountId}/memberships/{membershipId}/personalAccessTokens](https://developers.formstack.com/reference/createsubaccountmembershippersonalaccesstoken.md): Create a new Personal Access Token for a subaccount user. The membership must have an accepted user (not an invitation).
+- [/organizations/{organizationId}/subaccounts/{subaccountId}/memberships/{membershipId}/personalAccessTokens/{patId}](https://developers.formstack.com/reference/revokesubaccountmembershippersonalaccesstoken.md): Revoke a Personal Access Token belonging to a subaccount user.
+- [/organizations/{organizationId}/subaccounts/{subaccountId}](https://developers.formstack.com/reference/getsubaccount.md): Get subaccount details
+- [/organizations/{organizationId}/subaccounts/{subaccountId}/memberships](https://developers.formstack.com/reference/listsubaccountmemberships.md): List memberships for a subaccount. Results are ordered by `createdAt` ascending, then membership id. Pagination matches other Partner list endpoints (`total`, `page`, `data`).
+- [/organizations/{organizationId}/subaccounts/{subaccountId}/memberships/{membershipId}](https://developers.formstack.com/reference/updatesubaccountmembership.md): Update membership roles for a subaccount. Optional roles: omit the field to leave roles unchanged. Only roles for products included in the request are changed. Optional firstName and/or lastName update the member name; omitted name parts keep the existing stored value.
+- [/organizations/{organizationId}/subaccounts/{subaccountId}/memberships/{membershipId}/personalAccessTokens](https://developers.formstack.com/reference/listsubaccountmembershippersonalaccesstokens.md): List Personal Access Tokens for a subaccount membership. Token secrets are not included in the response.
+- [/organizations/{organizationId}/subaccounts/{subaccountId}](https://developers.formstack.com/reference/updatesubaccount.md): Update basic subaccount organization details. Currently supports updating `name` only. Name changes propagate asynchronously to connected products (SNS OrganizationUpdated) and billing (Zuora via OrganizationRenamed).
+- [Subaccount Provisioning through Partner REST API](https://developers.formstack.com/reference/subaccount-provisioning-through-partner-rest-api.md)
+- [Subaccount Product Catalog](https://developers.formstack.com/reference/subaccount-product-catalog.md)
+- [Overview](https://developers.formstack.com/reference/overview.md)
+- [Authentication](https://developers.formstack.com/reference/authentication-1.md)
+
+## Changelog
+- [Themes API - New Features](https://developers.formstack.com/changelog/themes-api-new-features.md)
+- [V2025 Forms API Released!](https://developers.formstack.com/changelog/v2025-forms-api-released.md)
+- [New Subaccount Services](https://developers.formstack.com/changelog/new-subaccount-services.md)
+- [Welcome to Formstack](https://developers.formstack.com/changelog/welcome-to-formstack.md)
+- [New Submission Search Service](https://developers.formstack.com/changelog/new-submission-search-service.md)

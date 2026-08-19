@@ -1,0 +1,434 @@
+{
+  "item": [
+    {
+      "id": "69da4e58-2a25-4f16-8050-020a3f7724c2",
+      "name": "Confirmations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6cdfc3c8-4d5c-44a4-bdb2-64c84838ee0f",
+          "name": "List confirmations",
+          "request": {
+            "name": "List confirmations",
+            "description": {},
+            "url": {
+              "path": [
+                "form",
+                ":formId",
+                "confirmation.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "formId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "806b8aa2-6e6a-4650-9478-e982124cb1b6",
+              "name": "Confirmations.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "form",
+                    ":formId",
+                    "confirmation.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "formId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9a939152-a838-436d-b9b4-109f5b3772c4",
+          "name": "Create confirmation",
+          "request": {
+            "name": "Create confirmation",
+            "description": {},
+            "url": {
+              "path": [
+                "form",
+                ":formId",
+                "confirmation.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "formId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "61d7289a-88b0-4be0-9a41-29e723e6fc11",
+              "name": "Created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "form",
+                    ":formId",
+                    "confirmation.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "formId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2a6d0f21-95a9-45f0-ac2c-ec13f1377481",
+          "name": "Get confirmation",
+          "request": {
+            "name": "Get confirmation",
+            "description": {},
+            "url": {
+              "path": [
+                "confirmation",
+                "{{confirmationId}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "876224ad-2c41-44b6-b4b7-16231b21dda8",
+              "name": "Confirmation.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "confirmation",
+                    "{{confirmationId}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fdeafba0-d2ad-4c4c-a22c-32bae25d7fac",
+          "name": "Update confirmation",
+          "request": {
+            "name": "Update confirmation",
+            "description": {},
+            "url": {
+              "path": [
+                "confirmation",
+                "{{confirmationId}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f84e8c66-0e74-4636-8a7c-84986ae20ba7",
+              "name": "Updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "confirmation",
+                    "{{confirmationId}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4346b490-ec2d-4b00-8509-f603430c0006",
+          "name": "Delete confirmation",
+          "request": {
+            "name": "Delete confirmation",
+            "description": {},
+            "url": {
+              "path": [
+                "confirmation",
+                "{{confirmationId}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ffb069c5-d94c-4ee6-8d4a-0487586974c6",
+              "name": "Deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "confirmation",
+                    "{{confirmationId}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.formstack.com/api/v2",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "confirmationId"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "forms_read forms_write submissions_read submissions_write"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://www.formstack.com/api/v2/oauth2/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://www.formstack.com/api/v2/oauth2/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ade7f60f-3b2d-4b73-be27-577dcd6dbca7",
+    "name": "Formstack Confirmations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Formstack — manage forms, fields, submissions, confirmations,\nnotifications, webhooks, themes, folders, portals, smart lists, subaccounts,\nsubmit actions, and partial submissions. Authentication uses OAuth 2.0.\n\nDetailed endpoint definitions are derived from the public developer portal\nat https://developers.formstack.com/ (machine-readable index at\nhttps://developers.formstack.com/llms.txt).\n\n\nContact Support:\n Name: Formstack Developers",
+      "type": "text/plain"
+    }
+  }
+}

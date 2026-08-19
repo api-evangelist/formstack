@@ -1,0 +1,434 @@
+{
+  "item": [
+    {
+      "id": "56faed65-6e4f-476b-bb9a-07a7364172ce",
+      "name": "Fields",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c00bd005-5947-4bc5-bd7b-0531a49b668a",
+          "name": "List fields",
+          "request": {
+            "name": "List fields",
+            "description": {},
+            "url": {
+              "path": [
+                "form",
+                ":formId",
+                "field.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "formId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f0123931-ef9b-437c-9676-fa47b0eb33aa",
+              "name": "Fields list.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "form",
+                    ":formId",
+                    "field.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "formId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "14589b26-0980-4f56-8aef-a1d13b9bccad",
+          "name": "Create field",
+          "request": {
+            "name": "Create field",
+            "description": {},
+            "url": {
+              "path": [
+                "form",
+                ":formId",
+                "field.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "formId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fc60fa90-7e07-4808-8e61-2d13228d55b6",
+              "name": "Field created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "form",
+                    ":formId",
+                    "field.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "formId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "16321f81-d244-46f9-b707-cf6a3c08b3bf",
+          "name": "Get field",
+          "request": {
+            "name": "Get field",
+            "description": {},
+            "url": {
+              "path": [
+                "field",
+                "{{fieldId}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ec1a8556-1ee7-4659-bc9b-24fc861807d3",
+              "name": "Field.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "field",
+                    "{{fieldId}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0bed00cf-082e-4b8d-a8d7-7efd43a1a962",
+          "name": "Update field",
+          "request": {
+            "name": "Update field",
+            "description": {},
+            "url": {
+              "path": [
+                "field",
+                "{{fieldId}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "94d2462b-cc7a-4457-be05-a85fbc1df911",
+              "name": "Field updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "field",
+                    "{{fieldId}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "468bd654-eb8e-481b-81cd-692248b4dc8b",
+          "name": "Delete field",
+          "request": {
+            "name": "Delete field",
+            "description": {},
+            "url": {
+              "path": [
+                "field",
+                "{{fieldId}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7136d967-6b2b-455e-9a35-2aff24d1e7b5",
+              "name": "Field deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "field",
+                    "{{fieldId}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.formstack.com/api/v2",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "fieldId"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "forms_read forms_write submissions_read submissions_write"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://www.formstack.com/api/v2/oauth2/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://www.formstack.com/api/v2/oauth2/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "b02add20-6f54-4f7b-ada6-763071b8a347",
+    "name": "Formstack Confirmations Fields API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Formstack — manage forms, fields, submissions, confirmations,\nnotifications, webhooks, themes, folders, portals, smart lists, subaccounts,\nsubmit actions, and partial submissions. Authentication uses OAuth 2.0.\n\nDetailed endpoint definitions are derived from the public developer portal\nat https://developers.formstack.com/ (machine-readable index at\nhttps://developers.formstack.com/llms.txt).\n\n\nContact Support:\n Name: Formstack Developers",
+      "type": "text/plain"
+    }
+  }
+}

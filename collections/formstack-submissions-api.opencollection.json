@@ -1,0 +1,140 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Formstack Confirmations Submissions API",
+    "version": "2025"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://www.formstack.com/api/v2/oauth2/authorize",
+      "accessTokenUrl": "https://www.formstack.com/api/v2/oauth2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Submissions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List submissions for a form",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/form/:formId/submission.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "min_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max_time",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List submissions for a form"
+        },
+        {
+          "info": {
+            "name": "Create submission",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/form/:formId/submission.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create submission"
+        },
+        {
+          "info": {
+            "name": "Get submission",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/submission/:submissionId.json",
+            "params": [
+              {
+                "name": "submissionId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get submission"
+        },
+        {
+          "info": {
+            "name": "Update submission",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.formstack.com/api/v2/submission/:submissionId.json",
+            "params": [
+              {
+                "name": "submissionId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update submission"
+        },
+        {
+          "info": {
+            "name": "Delete submission",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.formstack.com/api/v2/submission/:submissionId.json",
+            "params": [
+              {
+                "name": "submissionId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete submission"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

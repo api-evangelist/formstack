@@ -1,0 +1,120 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Formstack Confirmations Notifications API",
+    "version": "2025"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://www.formstack.com/api/v2/oauth2/authorize",
+      "accessTokenUrl": "https://www.formstack.com/api/v2/oauth2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Notifications",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List notifications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/form/:formId/notification.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List notifications"
+        },
+        {
+          "info": {
+            "name": "Create notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.formstack.com/api/v2/form/:formId/notification.json",
+            "params": [
+              {
+                "name": "formId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create notification"
+        },
+        {
+          "info": {
+            "name": "Get notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.formstack.com/api/v2/notification/:notificationId.json",
+            "params": [
+              {
+                "name": "notificationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get notification"
+        },
+        {
+          "info": {
+            "name": "Update notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.formstack.com/api/v2/notification/:notificationId.json",
+            "params": [
+              {
+                "name": "notificationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update notification"
+        },
+        {
+          "info": {
+            "name": "Delete notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.formstack.com/api/v2/notification/:notificationId.json",
+            "params": [
+              {
+                "name": "notificationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete notification"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
