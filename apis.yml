@@ -27,6 +27,13 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/formstack.
 tags:
   - Forms
   - Documents
+  - E-Signature
+  - Workflow-Automation
+  - No-Code
+  - Authentication
+tags_raw:
+  - Forms
+  - Documents
   - eSignature
   - Workflow Automation
   - No-Code
@@ -82,6 +89,9 @@ apis:
   humanURL: https://developers.formstack.com/reference/api-overview
   baseURL: https://www.formstack.com/api/v2
   tags:
+  - Webhook
+  - Event
+  tags_raw:
   - Webhooks
   - Events
   properties:
@@ -123,6 +133,9 @@ apis:
   humanURL: https://developers.formstack.com/
   baseURL: https://www.formstack.com/api/v2
   tags:
+  - E-Signature
+  - Sign
+  tags_raw:
   - eSignature
   - Sign
   properties:
@@ -149,6 +162,8 @@ apis:
   humanURL: https://developers.formstack.com/reference/oauth2-authentication
   baseURL: https://www.formstack.com/api/v2/oauth2
   tags:
+  - Authentication
+  tags_raw:
   - OAuth2
   - Authentication
   properties:
@@ -200,6 +215,8 @@ apis:
   humanURL: https://developers.formstack.com/reference/api-overview
   baseURL: https://www.formstack.com/api/v2
   tags:
+  - Notification
+  tags_raw:
   - Notifications
   properties:
   - type: OpenAPI
@@ -230,6 +247,8 @@ apis:
   humanURL: https://developers.formstack.com/reference/api-overview
   baseURL: https://www.formstack.com/api/v2
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
