@@ -10,6 +10,17 @@ description: >-
   product-specific surfaces for Formstack Documents, Formstack Sign, and
   Formstack Workflows. Authentication uses OAuth 2.0. Machine-readable indexes
   and OpenAPI artifacts are surfaced at developers.formstack.com/llms.txt.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: self-serve
