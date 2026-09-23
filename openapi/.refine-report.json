@@ -1,14 +1,7 @@
 {
   "provider": "formstack",
   "sources": [
-    "formstack-confirmations-api-openapi.yml",
-    "formstack-fields-api-openapi.yml",
-    "formstack-folders-api-openapi.yml",
-    "formstack-forms-api-openapi.yml",
-    "formstack-notifications-api-openapi.yml",
-    "formstack-subaccounts-api-openapi.yml",
-    "formstack-submissions-api-openapi.yml",
-    "formstack-webhooks-api-openapi.yml"
+    "_original/formstack-openapi.yml"
   ],
   "outputs": [
     "formstack-confirmations-api-openapi.yml",
@@ -23,6 +16,27 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "formstack-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "formstack-openapi.yml: declared missing tag: Confirmations",
+    "formstack-openapi.yml: declared missing tag: Fields",
+    "formstack-openapi.yml: declared missing tag: Folders",
+    "formstack-openapi.yml: declared missing tag: Forms",
+    "formstack-openapi.yml: declared missing tag: Notifications",
+    "formstack-openapi.yml: declared missing tag: Subaccounts",
+    "formstack-openapi.yml: declared missing tag: Submissions",
+    "formstack-openapi.yml: declared missing tag: Webhooks",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "formstack-confirmations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "formstack-fields-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "formstack-folders-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "formstack-forms-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "formstack-notifications-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "formstack-subaccounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "formstack-submissions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "formstack-webhooks-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

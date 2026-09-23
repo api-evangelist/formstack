@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Formstack Confirmations Submissions API
+  title: Formstack Submissions API
   description: 'REST API for Formstack — manage forms, fields, submissions, confirmations,
 
     notifications, webhooks, themes, folders, portals, smart lists, subaccounts,
@@ -12,9 +12,7 @@ info:
 
     at https://developers.formstack.com/ (machine-readable index at
 
-    https://developers.formstack.com/llms.txt).
-
-    '
+    https://developers.formstack.com/llms.txt).'
   version: 2025.0
   contact:
     name: Formstack Developers
@@ -88,8 +86,8 @@ paths:
           description: Submission deleted.
 components:
   parameters:
-    formId:
-      name: formId
+    submissionId:
+      name: submissionId
       in: path
       required: true
       schema:
@@ -107,8 +105,8 @@ components:
         type: integer
         minimum: 1
         maximum: 100
-    submissionId:
-      name: submissionId
+    formId:
+      name: formId
       in: path
       required: true
       schema:
