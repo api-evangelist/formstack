@@ -73,14 +73,14 @@ paths:
           description: Deleted.
 components:
   parameters:
-    webhookId:
-      name: webhookId
+    formId:
+      name: formId
       in: path
       required: true
       schema:
         type: string
-    formId:
-      name: formId
+    webhookId:
+      name: webhookId
       in: path
       required: true
       schema:

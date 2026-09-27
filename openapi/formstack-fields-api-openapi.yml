@@ -73,14 +73,14 @@ paths:
           description: Field deleted.
 components:
   parameters:
-    fieldId:
-      name: fieldId
+    formId:
+      name: formId
       in: path
       required: true
       schema:
         type: string
-    formId:
-      name: formId
+    fieldId:
+      name: fieldId
       in: path
       required: true
       schema:
