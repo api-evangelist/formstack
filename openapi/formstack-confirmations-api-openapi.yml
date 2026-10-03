@@ -73,14 +73,14 @@ paths:
           description: Deleted.
 components:
   parameters:
-    confirmationId:
-      name: confirmationId
+    formId:
+      name: formId
       in: path
       required: true
       schema:
         type: string
-    formId:
-      name: formId
+    confirmationId:
+      name: confirmationId
       in: path
       required: true
       schema:
