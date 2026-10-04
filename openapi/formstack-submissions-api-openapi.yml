@@ -92,6 +92,12 @@ components:
       required: true
       schema:
         type: string
+    page:
+      name: page
+      in: query
+      schema:
+        type: integer
+        minimum: 1
     formId:
       name: formId
       in: path
@@ -105,12 +111,6 @@ components:
         type: integer
         minimum: 1
         maximum: 100
-    page:
-      name: page
-      in: query
-      schema:
-        type: integer
-        minimum: 1
   securitySchemes:
     oauth2:
       type: oauth2
