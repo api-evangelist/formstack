@@ -111,18 +111,18 @@ paths:
           description: Prefilled URL generated.
 components:
   parameters:
-    page:
-      name: page
-      in: query
-      schema:
-        type: integer
-        minimum: 1
     formId:
       name: formId
       in: path
       required: true
       schema:
         type: string
+    page:
+      name: page
+      in: query
+      schema:
+        type: integer
+        minimum: 1
     per_page:
       name: per_page
       in: query
