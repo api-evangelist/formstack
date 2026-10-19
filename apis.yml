@@ -184,90 +184,16 @@ apis:
   properties:
   - type: Documentation
     url: https://developers.formstack.com/reference/oauth2-authentication
-- aid: formstack:formstack-confirmations-api
-  name: Formstack Confirmations API
-  description: The Confirmations API from Formstack — 2 operation(s) for confirmations.
+- aid: formstack:formstack-partnerapi-api
+  name: Formstack Partner API
+  description: PartnerApi
   humanURL: https://developers.formstack.com/reference/api-overview
   baseURL: https://www.formstack.com/api/v2
   tags:
-  - Confirmations
+  - PartnerApi
   properties:
   - type: OpenAPI
-    url: openapi/formstack-confirmations-api-openapi.yml
-- aid: formstack:formstack-fields-api
-  name: Formstack Fields API
-  description: The Fields API from Formstack — 2 operation(s) for fields.
-  humanURL: https://developers.formstack.com/reference/api-overview
-  baseURL: https://www.formstack.com/api/v2
-  tags:
-  - Fields
-  properties:
-  - type: OpenAPI
-    url: openapi/formstack-fields-api-openapi.yml
-- aid: formstack:formstack-folders-api
-  name: Formstack Folders API
-  description: The Folders API from Formstack — 2 operation(s) for folders.
-  humanURL: https://developers.formstack.com/reference/api-overview
-  baseURL: https://www.formstack.com/api/v2
-  tags:
-  - Folders
-  properties:
-  - type: OpenAPI
-    url: openapi/formstack-folders-api-openapi.yml
-- aid: formstack:formstack-forms-api
-  name: Formstack Forms API
-  description: The Forms API from Formstack — 5 operation(s) for forms.
-  humanURL: https://developers.formstack.com/reference/api-overview
-  baseURL: https://www.formstack.com/api/v2
-  tags:
-  - Forms
-  properties:
-  - type: OpenAPI
-    url: openapi/formstack-forms-api-openapi.yml
-- aid: formstack:formstack-notifications-api
-  name: Formstack Notifications API
-  description: The Notifications API from Formstack — 2 operation(s) for notifications.
-  humanURL: https://developers.formstack.com/reference/api-overview
-  baseURL: https://www.formstack.com/api/v2
-  tags:
-  - Notification
-  tags_raw:
-  - Notifications
-  properties:
-  - type: OpenAPI
-    url: openapi/formstack-notifications-api-openapi.yml
-- aid: formstack:formstack-subaccounts-api
-  name: Formstack Subaccounts API
-  description: The Subaccounts API from Formstack — 1 operation(s) for subaccounts.
-  humanURL: https://developers.formstack.com/reference/api-overview
-  baseURL: https://www.formstack.com/api/v2
-  tags:
-  - Subaccounts
-  properties:
-  - type: OpenAPI
-    url: openapi/formstack-subaccounts-api-openapi.yml
-- aid: formstack:formstack-submissions-api
-  name: Formstack Submissions API
-  description: The Submissions API from Formstack — 2 operation(s) for submissions.
-  humanURL: https://developers.formstack.com/reference/api-overview
-  baseURL: https://www.formstack.com/api/v2
-  tags:
-  - Submissions
-  properties:
-  - type: OpenAPI
-    url: openapi/formstack-submissions-api-openapi.yml
-- aid: formstack:formstack-webhooks-api
-  name: Formstack Webhooks API
-  description: The Webhooks API from Formstack — 2 operation(s) for webhooks.
-  humanURL: https://developers.formstack.com/reference/api-overview
-  baseURL: https://www.formstack.com/api/v2
-  tags:
-  - Webhook
-  tags_raw:
-  - Webhooks
-  properties:
-  - type: OpenAPI
-    url: openapi/formstack-webhooks-api-openapi.yml
+    url: openapi/formstack-partnerapi-api-openapi.yml
 common:
   - type: Plans
     url: plans/formstack-plans-pricing.yml

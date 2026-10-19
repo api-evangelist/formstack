@@ -1,0 +1,12 @@
+{
+ "url": "https://developers.formstack.com/openapi/storageapi-docsapi-partner-docs.json",
+ "final": "https://developers.formstack.com/openapi/storageapi-docsapi-partner-docs.json",
+ "status": 200,
+ "content_type": "application/json; charset=utf-8",
+ "bytes": 33837,
+ "sha256": "f87327734ace2238bd7fecdd26ea8b3563ed8629dd8d23a60f3288d02e3cc63a",
+ "fetched_at": "2026-10-19",
+ "fetched_by": "APIEvangelist-Harvest/1.0 (+https://apievangelist.com)",
+ "match": "byte-identical",
+ "note": "re-archived: the provider's current document replaced a stale archive (roadmap#793); the old files are in openapi/_superseded/2026-10-19-stale"
+}
