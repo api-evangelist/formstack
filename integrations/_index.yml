@@ -108,19 +108,6 @@
     builder: n8n (built-in node)
   status: not-a-workflow
   arazzo: null
-- slug: formstack-zendesk-own
-  label: Zendesk (own)
-  partner: zendesk
-  partner_name: Zendesk (own)
-  category: Surveys and Reviews
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://www.zendesk.com/marketplace/apps/support/1413/formstack/
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: formstack-salesforce-appexchange-security-review
   label: Salesforce AppExchange Security Review
   partner: salesforce
@@ -166,5 +153,31 @@
     requirement: https://developer.salesforce.com/docs/atlas.en-us.packagingGuide.meta/packagingGuide/security_review_overview.htm
     detected_by: sweep-salesforce-appexchange.py
     detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null
+- slug: formstack-zendesk-own
+  label: Zendesk (own)
+  partner: zendesk
+  partner_name: Zendesk (own)
+  category: Surveys and Reviews
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.zendesk.com/marketplace/apps/support/1413/formstack/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: formstack-hubspot-own
+  label: HubSpot (own)
+  partner: hubspot
+  partner_name: HubSpot (own)
+  category: WORKFLOW_AUTOMATION
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://ecosystem.hubspot.com/marketplace/listing/formstack-com-production-1049091
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
