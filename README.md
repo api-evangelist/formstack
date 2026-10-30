@@ -1,4 +1,4 @@
-# Formstack (formstack)
+# Formstack
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,199 +66,148 @@
 
 Formstack is a no-code workplace productivity platform spanning online forms, document generation, electronic signature, and workflow automation. The developer portal at developers.formstack.com exposes a REST API (v2025.0) for forms, submissions, fields, webhooks, folders, and partial submissions, plus product-specific surfaces for Formstack Documents, Formstack Sign, and Formstack Workflows. Authentication uses OAuth 2.0. Machine-readable indexes and OpenAPI artifacts are surfaced at developers.formstack.com/llms.txt.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/apis.yml)
+**Areas:** Forms · Documents · E-Signature · Workflow Automation · No-Code · Authentication
 
-## Tags
+## Formstack on APIs.io
 
-- Forms
-- Documents
-- eSignature
-- Workflow Automation
-- No-Code
-- OAuth2
+Everything profiled for Formstack is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/formstack/](https://apis.io/providers/formstack/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (17)
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-05-30
+- [Formstack Forms API](https://apis.io/apis/formstack/forms/) — REST API for creating, reading, updating, and deleting forms in a Formstack account, including form configuration, styling, and access rules.
+- [Formstack Submissions API](https://apis.io/apis/formstack/submissions/) — Read, create, update, and delete form submissions; supports filtering by date, search, and field values. Returns submitted field data and metadata.
+- [Formstack Fields API](https://apis.io/apis/formstack/fields/) — Programmatically manage form fields - text, select, file upload, signature, payment, calculation, and others - including ordering, validation, and…
+- [Formstack Webhooks API](https://apis.io/apis/formstack/webhooks/) — Configure webhook subscriptions to receive submission events at a customer-provided URL, with retry semantics for failed deliveries.
+- [Formstack Folders API](https://apis.io/apis/formstack/folders/) — Manage folder organization for forms within a Formstack account.
+- [Formstack Documents API](https://apis.io/apis/formstack/documents/) — Programmatic interface to Formstack Documents (formerly WebMerge) for generating PDFs, Word docs, and other templated documents from data payloads.
+- [Formstack Sign API](https://apis.io/apis/formstack/sign/) — Electronic signature API for sending documents for signature, tracking status, and retrieving signed copies. Part of the Formstack Suite.
+- [Formstack Workflows API](https://apis.io/apis/formstack/workflows/) — Workflow automation surface for routing submissions, documents, and approvals across multi-step business processes.
+- [Formstack OAuth 2.0](https://apis.io/apis/formstack/oauth2/) — OAuth 2.0 authorization server used to authenticate API clients and issue access tokens for the Formstack REST API.
+- [Formstack Confirmations API](https://apis.io/apis/formstack/formstack-confirmations-api/) — The Confirmations API from Formstack — 2 operation(s) for confirmations.
+- [Formstack Fields API](https://apis.io/apis/formstack/formstack-fields-api/) — The Fields API from Formstack — 2 operation(s) for fields.
+- [Formstack Folders API](https://apis.io/apis/formstack/formstack-folders-api/) — The Folders API from Formstack — 2 operation(s) for folders.
+- [Formstack Forms API](https://apis.io/apis/formstack/formstack-forms-api/) — The Forms API from Formstack — 5 operation(s) for forms.
+- [Formstack Notifications API](https://apis.io/apis/formstack/formstack-notifications-api/) — The Notifications API from Formstack — 2 operation(s) for notifications.
+- [Formstack Subaccounts API](https://apis.io/apis/formstack/formstack-subaccounts-api/) — The Subaccounts API from Formstack — 1 operation(s) for subaccounts.
+- [Formstack Submissions API](https://apis.io/apis/formstack/formstack-submissions-api/) — The Submissions API from Formstack — 2 operation(s) for submissions.
+- [Formstack Webhooks API](https://apis.io/apis/formstack/formstack-webhooks-api/) — The Webhooks API from Formstack — 2 operation(s) for webhooks.
 
-## APIs
+### Published properties
 
-### Formstack Forms API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-REST API for creating, reading, updating, and deleting forms in a Formstack account, including form configuration, styling, and access rules.
+#### Agentic access (1)
 
-- **Human URL:** [https://developers.formstack.com/reference/api-overview](https://developers.formstack.com/reference/api-overview)
-- **Base URL:** `https://www.formstack.com/api/v2`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Formstack Agentic Access](https://apis.io/agentic-access/formstack/formstack-agentic-access/)
 
-- Forms
-- REST
+#### Collections (10)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://developers.formstack.com/reference/api-overview)
-- [Postman Collection](collections/formstack.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/formstack.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Formstack API](https://apis.io/collections/formstack/open-formstack/)
+- [Formstack Webhooks](https://apis.io/collections/formstack/open-formstack-asyncapi/)
+- [Formstack Confirmations API](https://apis.io/collections/formstack/open-formstack-confirmations-api/)
+- [Formstack Confirmations Fields API](https://apis.io/collections/formstack/open-formstack-fields-api/)
+- [Formstack Confirmations Folders API](https://apis.io/collections/formstack/open-formstack-folders-api/)
+- [Formstack Confirmations Forms API](https://apis.io/collections/formstack/open-formstack-forms-api/)
+- [Formstack Confirmations Notifications API](https://apis.io/collections/formstack/open-formstack-notifications-api/)
+- [Formstack Confirmations Subaccounts API](https://apis.io/collections/formstack/open-formstack-subaccounts-api/)
+- [Formstack Confirmations Submissions API](https://apis.io/collections/formstack/open-formstack-submissions-api/)
+- [Formstack Confirmations Webhooks API](https://apis.io/collections/formstack/open-formstack-webhooks-api/)
 
-### Formstack Submissions API
+#### Security (4)
 
-Read, create, update, and delete form submissions; supports filtering by date, search, and field values. Returns submitted field data and metadata.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://developers.formstack.com/reference/api-overview](https://developers.formstack.com/reference/api-overview)
-- **Base URL:** `https://www.formstack.com/api/v2`
+- [Formstack Authentication](https://apis.io/security/formstack/formstack-authentication/)
+- [Formstack Domain Security](https://apis.io/security/formstack/formstack-domain-security/)
+- [Formstack Trust Center](https://apis.io/security/formstack/formstack-trust-center/)
+- [Formstack Vulnerability Disclosure](https://apis.io/security/formstack/formstack-vulnerability-disclosure/)
 
-#### Tags
+#### OAuth scopes (1)
 
-- Submissions
-- Data
+The permissions the API asks for.
 
-#### Properties
+- [Formstack Scopes](https://apis.io/scopes/formstack/formstack-scopes/)
 
-- [Documentation](https://developers.formstack.com/reference/api-overview)
-- [Postman Collection](collections/formstack.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/formstack.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Plans and pricing (1)
 
-### Formstack Fields API
+Published plans, tiers and prices.
 
-Programmatically manage form fields - text, select, file upload, signature, payment, calculation, and others - including ordering, validation, and conditional logic.
+- [Formstack Plans Pricing](https://apis.io/plans/formstack/formstack-plans-pricing/)
 
-- **Human URL:** [https://developers.formstack.com/reference/api-overview](https://developers.formstack.com/reference/api-overview)
-- **Base URL:** `https://www.formstack.com/api/v2`
+#### Rate limits (1)
 
-#### Tags
+Published request limits.
 
-- Fields
-- Form Schema
+- [Formstack Rate Limits](https://apis.io/rate-limits/formstack/formstack-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Documentation](https://developers.formstack.com/reference/api-overview)
-- [Postman Collection](collections/formstack.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/formstack.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+What the API costs to run, by operation.
 
-### Formstack Webhooks API
+- [Formstack Finops](https://apis.io/finops/formstack/formstack-finops/)
 
-Configure webhook subscriptions to receive submission events at a customer-provided URL, with retry semantics for failed deliveries.
+## Where to find this API
 
-- **Human URL:** [https://developers.formstack.com/reference/api-overview](https://developers.formstack.com/reference/api-overview)
-- **Base URL:** `https://www.formstack.com/api/v2`
-
-#### Tags
-
-- Webhooks
-- Events
-
-#### Properties
-
-- [Documentation](https://developers.formstack.com/reference/api-overview)
-- [AsyncAPI](https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/openapi/formstack-asyncapi.yml) — [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest)
-- [Postman Collection](collections/formstack.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/formstack.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Formstack Folders API
-
-Manage folder organization for forms within a Formstack account.
-
-- **Human URL:** [https://developers.formstack.com/reference/api-overview](https://developers.formstack.com/reference/api-overview)
-- **Base URL:** `https://www.formstack.com/api/v2`
-
-#### Tags
-
-- Folders
-- Organization
-
-#### Properties
-
-- [Documentation](https://developers.formstack.com/reference/api-overview)
-- [Postman Collection](collections/formstack.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/formstack.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Formstack Documents API
-
-Programmatic interface to Formstack Documents (formerly WebMerge) for generating PDFs, Word docs, and other templated documents from data payloads.
-
-- **Human URL:** [https://developers.formstack.com/](https://developers.formstack.com/)
-- **Base URL:** `https://www.webmerge.me/api`
-
-#### Tags
-
-- Documents
-- Document Generation
-- PDF
-
-#### Properties
-
-- [Documentation](https://developers.formstack.com/)
-- [Postman Collection](collections/formstack.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/formstack.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Formstack Sign API
-
-Electronic signature API for sending documents for signature, tracking status, and retrieving signed copies. Part of the Formstack Suite.
-
-- **Human URL:** [https://developers.formstack.com/](https://developers.formstack.com/)
-- **Base URL:** `https://www.formstack.com/api/v2`
-
-#### Tags
-
-- eSignature
-- Sign
-
-#### Properties
-
-- [Documentation](https://developers.formstack.com/)
-- [Postman Collection](collections/formstack.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/formstack.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Formstack Workflows API
-
-Workflow automation surface for routing submissions, documents, and approvals across multi-step business processes.
-
-- **Human URL:** [https://developers.formstack.com/](https://developers.formstack.com/)
-- **Base URL:** `https://www.formstack.com/api/v2`
-
-#### Tags
-
-- Workflows
-- Automation
-
-#### Properties
-
-- [Documentation](https://developers.formstack.com/)
-- [Postman Collection](collections/formstack.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/formstack.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Formstack OAuth 2.0
-
-OAuth 2.0 authorization server used to authenticate API clients and issue access tokens for the Formstack REST API.
-
-- **Human URL:** [https://developers.formstack.com/reference/oauth2-authentication](https://developers.formstack.com/reference/oauth2-authentication)
-- **Base URL:** `https://www.formstack.com/api/v2/oauth2`
-
-#### Tags
-
-- OAuth2
-- Authentication
-
-#### Properties
-
-- [Documentation](https://developers.formstack.com/reference/oauth2-authentication)
-- [Postman Collection](collections/formstack.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/formstack.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.formstack.com/)
 - [Documentation](https://developers.formstack.com/)
 - [Changelog](https://developers.formstack.com/changelog)
-- [L L Ms Txt](https://developers.formstack.com/llms.txt)
-- [LinkedIn](https://www.linkedin.com/company/formstack)
-- [Git Hub](https://github.com/formstack)
-- [Twitter](https://twitter.com/Formstack)
+- [Blog](https://www.formstack.com/blog/rss.xml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 22.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 12.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 13.2 |
+
+**Agent readiness 26.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | unknown |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 32.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/formstack/](https://apis.io/providers/formstack/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Formstack: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/formstack/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
